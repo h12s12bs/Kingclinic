@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KingsClinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TreatmentSelection">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="SEX" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="AGE" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="GOAL1" Type="float" Nullable="false" />
+          <Property Name="GOAL2" Type="float" Nullable="false" />
+          <Property Name="GOAL3" Type="float" Nullable="false" />
+          <Property Name="GOAL4" Type="float" Nullable="false" />
+          <Property Name="GOAL5" Type="float" Nullable="false" />
+          <Property Name="GOAL6" Type="float" Nullable="false" />
+          <Property Name="X1" Type="bit" Nullable="false" />
+          <Property Name="X2" Type="bit" Nullable="false" />
+          <Property Name="X3" Type="bit" Nullable="false" />
+          <Property Name="X4" Type="bit" Nullable="false" />
+          <Property Name="X5" Type="bit" Nullable="false" />
+          <Property Name="X6" Type="bit" Nullable="false" />
+          <Property Name="X7" Type="bit" Nullable="false" />
+          <Property Name="X8" Type="bit" Nullable="false" />
+          <Property Name="X9" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="KingsClinicModelStoreContainer">
+          <EntitySet Name="TreatmentSelection" EntityType="Self.TreatmentSelection" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KingsClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="KingsClinicEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="TreatmentSelection" EntityType="KingsClinicModel.TreatmentSelection" />
+        </EntityContainer>
+        <EntityType Name="TreatmentSelection">
+          <Key>
+            <PropertyRef Name="Sex" />
+            <PropertyRef Name="Age" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Sex" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Age" Type="Byte" Nullable="false" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="SEX" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="AGE" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="GOAL1" Type="Double" Nullable="false" />
+          <Property Name="GOAL2" Type="Double" Nullable="false" />
+          <Property Name="GOAL3" Type="Double" Nullable="false" />
+          <Property Name="GOAL4" Type="Double" Nullable="false" />
+          <Property Name="GOAL5" Type="Double" Nullable="false" />
+          <Property Name="GOAL6" Type="Double" Nullable="false" />
+          <Property Name="X1" Type="Boolean" Nullable="false" />
+          <Property Name="X2" Type="Boolean" Nullable="false" />
+          <Property Name="X3" Type="Boolean" Nullable="false" />
+          <Property Name="X4" Type="Boolean" Nullable="false" />
+          <Property Name="X5" Type="Boolean" Nullable="false" />
+          <Property Name="X6" Type="Boolean" Nullable="false" />
+          <Property Name="X7" Type="Boolean" Nullable="false" />
+          <Property Name="X8" Type="Boolean" Nullable="false" />
+          <Property Name="X9" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KingsClinicModelStoreContainer" CdmEntityContainer="KingsClinicEntities" >
+          <EntitySetMapping Name="TreatmentSelection">
+            <EntityTypeMapping TypeName="KingsClinicModel.TreatmentSelection">
+              <MappingFragment StoreEntitySet="TreatmentSelection">
+                <ScalarProperty Name="X9" ColumnName="X9" />
+                <ScalarProperty Name="X8" ColumnName="X8" />
+                <ScalarProperty Name="X7" ColumnName="X7" />
+                <ScalarProperty Name="X6" ColumnName="X6" />
+                <ScalarProperty Name="X5" ColumnName="X5" />
+                <ScalarProperty Name="X4" ColumnName="X4" />
+                <ScalarProperty Name="X3" ColumnName="X3" />
+                <ScalarProperty Name="X2" ColumnName="X2" />
+                <ScalarProperty Name="X1" ColumnName="X1" />
+                <ScalarProperty Name="GOAL6" ColumnName="GOAL6" />
+                <ScalarProperty Name="GOAL5" ColumnName="GOAL5" />
+                <ScalarProperty Name="GOAL4" ColumnName="GOAL4" />
+                <ScalarProperty Name="GOAL3" ColumnName="GOAL3" />
+                <ScalarProperty Name="GOAL2" ColumnName="GOAL2" />
+                <ScalarProperty Name="GOAL1" ColumnName="GOAL1" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
