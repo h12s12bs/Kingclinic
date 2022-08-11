@@ -14,25 +14,17 @@ namespace Kingclinic.Models
     
     public partial class TreatmentSelection
     {
-        public string Sex { get; set; }
-        public byte Age { get; set; }
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string SEX { get; set; }
         public string AGE { get; set; }
-        public double GOAL1 { get; set; }
-        public double GOAL2 { get; set; }
-        public double GOAL3 { get; set; }
-        public double GOAL4 { get; set; }
-        public double GOAL5 { get; set; }
-        public double GOAL6 { get; set; }
-        public bool X1 { get; set; }
-        public bool X2 { get; set; }
-        public bool X3 { get; set; }
-        public bool X4 { get; set; }
-        public bool X5 { get; set; }
-        public bool X6 { get; set; }
-        public bool X7 { get; set; }
-        public bool X8 { get; set; }
-        public bool X9 { get; set; }
+        public string WEIGHT { get; set; }
+        public string HEIGHT { get; set; }
+        public string KLSCALE { get; set; }
+        public string GOAL1 { get; set; }
+        public string GOAL2 { get; set; }
+        public string GOAL3 { get; set; }
+        public string GOAL4 { get; set; }
+        public string GOAL5 { get; set; }
+        public string GOAL6 { get; set; }
     }
 }

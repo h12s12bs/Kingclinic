@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c84a5da0fd2a401d893434a7873258c4" Name="Diagram1" >
-        <EntityTypeShape EntityType="KingsClinicModel.TreatmentSelection" Width="1.5" PointX="0.625" PointY="0.5" />
+        <EntityTypeShape EntityType="KingsClinicModel.TreatmentSelection" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
