@@ -26,5 +26,6 @@ namespace Kingclinic.Models
         }
     
         public virtual DbSet<TreatmentSelection> TreatmentSelection { get; set; }
+        public virtual DbSet<Reservation> Reservation { get; set; }
     }
 }

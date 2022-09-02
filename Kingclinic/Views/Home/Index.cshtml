@@ -37,7 +37,7 @@
 
         </div>
     </section>
-    
+
     <!-- HOME -->
     <section id="home" class="slider" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -165,8 +165,8 @@
 
                 <div class="col-md-4 col-sm-6">
 
-                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s" >
-                        <img src="~/images/Funder.jpg" class="img-responsive" alt=""style="text-align:center">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="~/images/Funder.jpg" class="img-responsive" alt="" style="text-align:center">
                         <hr id="line">
                         <div class="team-info">
                             <h3>張光明 醫師</h3>
@@ -313,7 +313,7 @@
 
                 <div class="col-md-6 col-sm-6">
                     <!-- CONTACT FORM HERE -->
-                    <form id="appointment-form" role="form" method="post" action="#">
+                    <form id="appointment-form" role="form" method="post" action="Index">
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
@@ -333,15 +333,15 @@
 
                             <div class="col-md-6 col-sm-6">
                                 <label for="date">日期</label>
-                                <input type="date" name="date" value="" class="form-control">
+                                <input type="datetime-local" name="date" class="form-control">
                             </div>
 
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">門診項目</label>
-                                <select class="form-control">
-                                    <option>骨科</option>
-                                    <option>外科</option>
-                                    <option>家庭醫學科</option>
+                                <select class="form-control" name="program" id="program">
+                                    <option value="骨科">骨科</option>
+                                    <option value="外科">外科</option>
+                                    <option value="家庭醫學科">家庭醫學科</option>
                                 </select>
                             </div>
 
@@ -376,5 +376,7 @@
     <script src="~/Scripts/owl.carousel.min.js"></script>
     <script src="~/Scripts/custom.js"></script>
 
+
+    
 </body>
 </html>
