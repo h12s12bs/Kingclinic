@@ -11,7 +11,7 @@ namespace Kingclinic.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly KingsClinicEntities db = new KingsClinicEntities();
+        /*private readonly KingsClinicEntities db = new KingsClinicEntities();*/
         public ActionResult Index()
         {
             /*ViewBag.NAME = post["NAME"];

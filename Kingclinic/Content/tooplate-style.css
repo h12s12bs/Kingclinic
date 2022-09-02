@@ -67,11 +67,7 @@ http://www.tooplate.com/view/2098-health
     line-height: 24px;
   }
 
-  line {
-    display: block;
-    margin: 50px;
-  }
-  
+
   /*---------------------------------------
      GENERAL               
   -----------------------------------------*/
@@ -346,7 +342,7 @@ http://www.tooplate.com/view/2098-health
 
   .navbar-default .navbar-nav li a {
     color: #555555;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     padding-right: 20px;
     padding-left: 20px;
@@ -487,9 +483,9 @@ http://www.tooplate.com/view/2098-health
   }
   .profile img {
     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    margin-right: 0.5em;
+    width: 65px;
+    height: 65px;
+    margin-right: 1em;
   }
   .profile figcaption h3 {
     margin-top: 0;
@@ -499,23 +495,20 @@ http://www.tooplate.com/view/2098-health
     color: #858585;
     margin: 0;
   }
-  ul li::marker {
-    font-size:large;
-    color: #a5c422;
-  }
-  p.about{
-      font-size:16px;
-  }
-/*---------------------------------------
+
+
+
+  /*---------------------------------------
       TEAM MEMBERS              
   -----------------------------------------*/
-.team-thumb {
+
+  .team-thumb {
     background-color: #f9f9f9;
     border-radius: 0 0 10px 10px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-}
+  }
 
   .team-info {
     padding: 20px 30px 0 30px;
@@ -642,7 +635,6 @@ http://www.tooplate.com/view/2098-health
     list-style: circle;
     font-weight: normal;
     padding: 6px 12px 6px 0px;
-
   }
 
   .news-sidebar {
@@ -963,7 +955,6 @@ http://www.tooplate.com/view/2098-health
     }
     h3 {
       font-size: 1.5em;
-      
     }
 
     header {
