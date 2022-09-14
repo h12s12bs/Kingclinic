@@ -12,7 +12,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NAME" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="EMAIL" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="DATE" Type="datetime" Nullable="false" />
+          <Property Name="DATE" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="PROGRAM" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="PHONE" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SYMPTOM" Type="nchar" MaxLength="10" Nullable="false" />
@@ -70,7 +70,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NAME" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="PROGRAM" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="PHONE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="SYMPTOM" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />

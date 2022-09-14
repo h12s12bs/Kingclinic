@@ -6,34 +6,42 @@ using System.Web;
 using System.Web.Mvc;
 using static Community.CsharpSqlite.Sqlite3;
 using System.Data.SqlClient;
+using System.Text;
+using System.Diagnostics;
 
 namespace Kingclinic.Controllers
 {
     public class HomeController : Controller
     {
-        /*private readonly KingsClinicEntities db = new KingsClinicEntities();*/
+        private readonly KingsClinicEntities db = new KingsClinicEntities();
         public ActionResult Index()
         {
-            /*ViewBag.NAME = post["NAME"];
-            ViewBag.EMAIL = post["EMAIL"];
-            ViewBag.DATE = post["DATE"];
-            ViewBag.PROGRAM = post["PROGRAM"];
-            ViewBag.PHONE = post["PHONE"];
-            ViewBag.SYMPTOM = post["SYMPTOM"];
-            Reservation objArticle = new Reservation();
-            objArticle.NAME = post["NAME"];
-            objArticle.EMAIL = post["EMAIL"];
-            objArticle.DATE = Convert.ToDateTime(post["DATE"]);
-            objArticle.PROGRAM = post["PROGRAM"];
-            objArticle.PHONE = post["PHONE"];
-            objArticle.SYMPTOM = post["SYMPTOM"];
-          
-            db.Reservation.Add(objArticle);
-
-            db.SaveChanges();*/
+            
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(FormCollection PATIENT)
+        {
+                /*ViewBag.NAME = PATIENT["NAME"];
+                ViewBag.EMAIL = PATIENT["EMAIL"];
+                ViewBag.DATE = PATIENT["DATE"];
+                ViewBag.PROGRAM = PATIENT["PROGRAM"];
+                ViewBag.PHONE = PATIENT["PHONE"];
+                ViewBag.MESSAGE = PATIENT["MESSAGE"];*/
+            Reservation objArticle = new Reservation();
+            objArticle.NAME = PATIENT["NAME"];
+            objArticle.EMAIL = PATIENT["EMAIL"];
+            objArticle.DATE = PATIENT["DATE"];
+            objArticle.PROGRAM = PATIENT["PROGRAM"];
+            objArticle.PHONE = PATIENT["PHONE"];
+            objArticle.SYMPTOM = PATIENT["SYMPTOM"];
+
+            db.Reservation.Add(objArticle);
+
+            db.SaveChanges();
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

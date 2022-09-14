@@ -56,84 +56,85 @@
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                            <h2><i class="fa fa-hospital-o"></i> OA knee Treatment Decision Aid</h2>
+                            <h2><i class="fa fa-hospital-o"></i> 退化性膝關節炎治療決策輔助系統</h2>
+                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OA knee Treatment Decision Support System</h2>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h3>Informations:</h3>
+                            <h3>個人資料：</h3>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="select"><i class="fa fa-intersex"></i>Sex:</label>
+                            <label for="select"><i class="fa fa-intersex"></i>性別：</label>
                             <select class="form-control" name="SEX">
-                                <option value="男">Male</option>
-                                <option value="女">Female</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="Age"><i class="fa fa-child"></i>Age:</label>
+                            <label for="Age"><i class="fa fa-child"></i>年齡：</label>
                             <input type="text" class="form-control" id="Age" name="AGE" placeholder="Age">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="Weight"><i class='fas fa-weight'></i>Weight(kg):</label>
-                            <input type="text" class="form-control" id="Weight" name="Weight" placeholder="Weight">
+                            <label for="Weight"><i class='fas fa-weight'></i>體重(kg)：</label>
+                            <input type="text" class="form-control" id="Weight" name="Weight" placeholder="kg">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="Height">Height(cm):</label>
-                            <input type="text" class="form-control" id="Height" name="Height" placeholder="Height">
+                            <label for="Height">身高(cm):</label>
+                            <input type="text" class="form-control" id="Height" name="Height" placeholder="cm">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="select">K-L Scale Grade:</label>
+                            <label for="select">退化性關節炎等級(K-L Scale Grade)：</label>
                             <select class="form-control" name="KLSCALE">
-                                <option value="1">Grade 1</option>
-                                <option value="2">Grade 2</option>
-                                <option value="3">Grade 3</option>
-                                <option value="4">Grade 4</option>
+                                <option value="1">等級1(Grade 1)</option>
+                                <option value="2">等級2(Grade 2)</option>
+                                <option value="3">等級3(Grade 3)</option>
+                                <option value="4">等級4(Grade 4)</option>
                             </select>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h3>Goals:</h3>
+                            <h3>目標：</h3>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                             <div class="col-md-6 col-sm-6">
-                                <label for="name">Goal 1:Max release of pain</label>
+                                <label for="name">目標 1：最低可接受疼痛減輕的幅度</label>
                                 <select class="form-control" name="GOAL1">
-                                    <option value="40">40%</option>
-                                    <option value="50">50%</option>
-                                    <option value="60">60%</option>
-                                    <option value="70">70%</option>
-                                    <option value="80">80%</option>
+                                    <option value="0.4">40%</option>
+                                    <option value="0.5">50%</option>
+                                    <option value="0.6">60%</option>
+                                    <option value="0.7">70%</option>
+                                    <option value="0.8">80%</option>
                                 </select>
                                 @*<input type="text" class="form-control" id="name" name="name" placeholder="%">*@
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <label for="email">Goal 2:Max function improvement</label>
+                                <label for="email">目標 2：最低可接受功能進步的週數</label>
                                 <select class="form-control" name="GOAL2">
-                                    <option value="3">3 weeks</option>
-                                    <option value="6">6 weeks</option>
-                                    <option value="12">12 weeks</option>
-                                    <option value="26">26 weeks</option>
-                                    <option value="36">36 weeks</option>
-                                    <option value="48">48 weeks</option>
-                                    <option value="52">52 weeks</option>
+                                    <option value="3">3週</option>
+                                    <option value="6">6週</option>
+                                    <option value="12">12週</option>
+                                    <option value="26">26週</option>
+                                    <option value="36">36週</option>
+                                    <option value="48">48週</option>
+                                    <option value="52">52週</option>
                                 </select>
                                 @*<input type="email" class="form-control" id="email" name="email" placeholder="Week">*@
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <label for="date">Goal 3:Min partial reimbursement</label>
+                                <label for="date">目標 3：最高可接受的治療費用</label>
                                 <select class="form-control" name="GOAL3">
-                                    <option value="10000">10,000</option>
-                                    <option value="20000">20,000</option>
-                                    <option value="30000">30,000</option>
-                                    <option value="40000">40,000</option>
-                                    <option value="50000">50,000</option>
-                                    <option value="100000">100,000</option>
+                                    <option value="1">10,000</option>
+                                    <option value="0.8">20,000</option>
+                                    <option value="0.72">30,000</option>
+                                    <option value="0.56">40,000</option>
+                                    <option value="0.4">50,000</option>
+                                    <option value="0.2">100,000</option>
                                 </select>
                                 @*<input type="date" name="date" value="" class="form-control">*@
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <label for="select">Goal 4:Min wound infection</label>
+                                <label for="select">目標 4：最高可接受傷口感染的風險</label>
                                 <select class="form-control" name="GOAL4">
                                     <option value="0">0%</option>
                                     <option value="1.5">1.5%</option>
@@ -141,16 +142,16 @@
                                 </select>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="select">Goal 5:Min within three months</label>
+                                <label for="select">目標 5：最久可接受的治療時間</label>
                                 <select class="form-control" name="GOAL5">
-                                    <option value="3">3 monthes</option>
-                                    <option value="6">6 monthes</option>
-                                    <option value="9">9 monthes</option>
-                                    <option value="12">12 monthes</option>
+                                    <option value="3">3個月</option>
+                                    <option value="6">6個月</option>
+                                    <option value="9">9個月</option>
+                                    <option value="12">12個月</option>
                                 </select>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="select">Goal 6:Max non-surgery</label>
+                                <label for="select">目標 6：最低可接受是非手術療法的可能</label>
                                 <select class="form-control" name="GOAL6">
                                     <option value="0">0%</option>
                                     <option value="25">25%</option>
@@ -160,30 +161,31 @@
                                 </select>
                             </div>
                             <div class="col-md-12 col-sm-12">
-                                <h3>Constrains:</h3>
+                                <h3>約束：</h3>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="quality">Improve the quality of life:</label>
+                                <label for="quality">提升生活品質的幅度：</label>
                                 <input type="text" class="form-control" id="quality" name="quality" placeholder="%">
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="work">Return to work:</label>
-                                <input type="text" class="form-control" id="work" name="work" placeholder="Days">
+                                <label for="work">可以回原工作職場的週數：</label>
+                                <input type="text" class="form-control" id="work" name="work" placeholder="週數">
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="Risk of anesthesia">Risk of anesthesia:</label>
+                                <label for="Risk of anesthesia">可承受麻醉風險的幅度：</label>
                                 <input type="text" class="form-control" id="Risk of anesthesia" name="Risk of anesthesia" placeholder="%">
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="Reoperation">Reoperation:</label>
+                                <label for="Reoperation">可承受再次手術的可能：</label>
                                 <input type="text" class="form-control" id="Reoperation" name="Reoperation" placeholder="%">
                             </div>
+                            
                             <div class="col-md-12 col-sm-12">
                                 @*<label for="telephone">電話號碼</label>*@
                                 @*<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">*@
                                 @*<label for="Message">症狀概述</label>*@
                                 @*<textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>*@
-                                <button type="submit" class="form-control" id="cf-submit" name="Submit" onclick="Submit_click">Submit</button>
+                                <button type="submit" class="form-control" id="cf-submit" name="Submit" onclick="Submit_click">送出</button>
                             </div>
 
                         </div>

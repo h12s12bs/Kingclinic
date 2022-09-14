@@ -17,7 +17,7 @@ namespace Kingclinic.Models
         public int ID { get; set; }
         public string NAME { get; set; }
         public string EMAIL { get; set; }
-        public System.DateTime DATE { get; set; }
+        public string DATE { get; set; }
         public string PROGRAM { get; set; }
         public string PHONE { get; set; }
         public string SYMPTOM { get; set; }

@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+@model List<Kingclinic.Models.Reservation>
 <html lang="en">
 <head>
 
@@ -348,8 +349,12 @@
                             <div class="col-md-12 col-sm-12">
                                 <label for="telephone">電話號碼</label>
                                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="col-md-12 col-sm-12">
                                 <label for="Message">症狀概述</label>
-                                <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                                <input type="text" class="form-control" id="message" name="message" placeholder="Message">
+                            </div>
+                            <div class="col-md-12 col-sm-12">
                                 <button type="submit" class="form-control" id="cf-submit" name="submit">預約</button>
                             </div>
                         </div>
@@ -377,6 +382,6 @@
     <script src="~/Scripts/custom.js"></script>
 
 
-    
+
 </body>
 </html>
