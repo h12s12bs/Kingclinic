@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title 光明診所 | 健保特約復健診所</title>
-    <link rel="icon" href="~/images/King'sClinic.ico" type="image/x-icon"/>
+    <link rel="icon" href="~/images/King'sClinic.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="~/Content/custom-style.css">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -23,6 +25,7 @@
                     <span class="phone-icon"><a href="tel:+886-2-28210197"><i class="fa fa-phone"></i>02-2821-0197</a></span>
                     <span class="date-icon"><a href="#appointment"><i class="fa fa-calendar-plus-o"></i> 09:00  - 20:00  (Mon-Sat)</a></span>
                     <span class="email-icon"><a href="mailto:Kuang_C@hotmail.com"><i class="fa fa-envelope-o"></i>Kuang_C@hotmail.com</a></span>
+                    <span ><a href="https://lin.ee/pD4zte5" target="_blank"><img class="appointment-btn" src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="30"  border="0" ></a></span>
                 </div>
 
             </div>
@@ -49,13 +52,13 @@
             <div class="collapse navbar-collapse">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#top" class="smoothScroll">首頁</a></li>
-                    <li><a href="#about" class="smoothScroll">關於光明診所</a></li>
-                    <li><a href="#team" class="smoothScroll">醫師團隊</a></li>
-                    <li><a href="#news" class="smoothScroll">最新消息</a></li>
-                    <li><a href="#google-map" class="smoothScroll">聯絡我們</a></li>
-                    <li><a href="~/TDSS/Index" class="smoothScroll" target="_blank">OA治療方法決策輔助工具</a></li>
-                    <li class="appointment-btn"><a href="#appointment">預約掛號</a></li>
+                    <li><a href="~/Home/Index" class="smoothScroll" style="font-size:medium;">首頁</a></li>
+                    <li><a href="~/About/Index" class="smoothScroll" style="font-size:medium;">關於光明診所</a></li>
+                    <li><a href="~/Team/Index" class="smoothScroll" style="font-size:medium;">醫師團隊</a></li>
+                    <li><a href="~/News/Index" class="smoothScroll" style="font-size:medium;">最新消息</a></li>
+                    <li><a href="#google-map" class="smoothScroll" style="font-size:medium;">聯絡我們</a></li>
+                    <li><a href="~/TDSS/Index" class="smoothScroll" target="_blank" style="font-size:medium;">OA治療決策輔助工具</a></li>
+                    <li class="appointment-btn"><a href="~/Appointment/Index" style="font-size:medium;">預約掛號</a></li>
                 </ul>
             </div>
 
@@ -70,93 +73,129 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <div class="footer-thumb">
                             <h4 class="wow fadeInUp" data-wow-delay="0.4s">聯絡資訊</h4>
                             <p>地址：台北市北投區石牌路2段99巷55號1、2樓</p>
                             <p>服務項目：復健-物理治療業務、門診診療、兒童預防保健、成人預防保健、婦女子宮頸抹片檢查、孕婦產檢、口腔黏膜檢查、定量免疫法糞便潛血檢查、拇趾外翻微創手術</p>
-                            <div class="contact-info">
-                                <p> <a href="tel:+886-2-28210197"><i class="fa fa-phone"></i>02-2821-0197</a></p>
-                                <p> <a href="mailto:Kuang_C@hotmail.com"><i class="fa fa-envelope-o"></i>Kuang_C@hotmail.com</a></p>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-4">
-                        <div class="footer-thumb">
-                            <h4 class="wow fadeInUp" data-wow-delay="0.4s">最新消息</h4>
-                            <div class="latest-stories">
-                                <div class="stories-image">
-                                    <a href="#"><img src="~/images/news-image.jpg" class="img-responsive" alt=""></a>
-                                </div>
-                                <div class="stories-info">
-                                    <a href="#"><h5>Amazing Technology</h5></a>
-                                    <span>March 08, 2018</span>
-                                </div>
-                            </div>
+                                                @*<div class="col-md-4 col-sm-4">
+                                        <div class="footer-thumb">
+                                            <h4 class="wow fadeInUp" data-wow-delay="0.4s">最新消息</h4>
+                                            <div class="latest-stories">
+                                                <div class="stories-image">
+                                                    <a href="#"><img src="~/images/news-image.jpg" class="img-responsive" alt=""></a>
+                                                </div>
+                                                <div class="stories-info">
+                                                    <a href="#"><h5>Amazing Technology</h5></a>
+                                                    <span>March 08, 2018</span>
+                                                </div>
+                                            </div>
 
-                            <div class="latest-stories">
-                                <div class="stories-image">
-                                    <a href="#"><img src="~/images/news-image.jpg" class="img-responsive" alt=""></a>
-                                </div>
-                                <div class="stories-info">
-                                    <a href="#"><h5>New Healing Process</h5></a>
-                                    <span>February 20, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                            <div class="latest-stories">
+                                                <div class="stories-image">
+                                                    <a href="#"><img src="~/images/news-image.jpg" class="img-responsive" alt=""></a>
+                                                </div>
+                                                <div class="stories-info">
+                                                    <a href="#"><h5>New Healing Process</h5></a>
+                                                    <span>February 20, 2018</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>*@
 
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6 service-time">
                         <div class="footer-thumb">
                             <div class="opening-hours">
-                                <h4 class="wow fadeInUp" data-wow-delay="0.4s">門診時間</h4>
-                                <p>週一、週四 </p><p><span>早診:09:00  - 12:00 </span> <span>午診:13:00  - 18:00 (約診)</span> <span>晚診:18:00  - 20:00 </span></p>
-                                <p>週二、週三、週五 </p><p><span>午診:15:00  - 18:00 </span> <span>晚診:18:00  - 20:00 </span></p>
-                                <p>週六 </p><p><span>早診:09:00  - 12:00 </span></p>
-                                <p>週六下午、晚上與週日 </p><p><span>休診</span></p>
+                                <h4 class="wow fadeInUp" data-wow-delay="0.4s">看診時間</h4>
+                                <div class="table-responsive h-in-gtuttable">
+                                    <table border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <th style="text-align: center;" valign="middle">看診時間</th>
+                                                <th style="text-align: center;" valign="middle">一</th>
+                                                <th style="text-align: center;" valign="middle">二</th>
+                                                <th style="text-align: center;" valign="middle">三</th>
+                                                <th style="text-align: center;" valign="middle">四</th>
+                                                <th style="text-align: center;" valign="middle">五</th>
+                                                <th style="text-align: center;" valign="middle">六</th>
+                                                <th style="text-align: center;" valign="middle">日</th>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" valign="middle">09 : 00 - 12 : 00</td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle-o"></i>休</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" valign="middle">15 : 00 - 20 : 00</td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle"></i></td>
+                                                <td align="center" valign="middle"><i aria-hidden="true" class="fa fa-circle-o"></i>休</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-
-                            <ul class="social-icon">
-                                <li><a href="https://www.facebook.com/kingsclinic/offers/?ref=page_internal" class="fa fa-facebook-square fa-5x" attr="facebook icon" target="_blank" ></a></li>
-                                <li><a href="#" class="fa fa-twitter"></a></li>
-                                <li><a href="#" class="fa fa-instagram"></a></li>
-                            </ul>
                         </div>
                     </div>
-                    <!-- GOOGLE MAP -->
-                    <section id="google-map">
-                        <!-- How to change your own map point
-                        1. Go to Google Maps
-                        2. Click on your location point
-                        3. Click "Share" and choose "Embed map" tab
-                        4. Copy only URL and paste it within the src="" field below-->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14450.047860563986!2d121.50801568501845!3d25.118376644183186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae8b74ca5835%3A0x552f01f3164e7850!2z5YWJ5piO6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1658202721874!5m2!1szh-TW!2stw" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </section>
-                    <div class="col-md-12 col-sm-12 border-top">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="copyright-text" style="width:500px">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="footer-thumb">
+                            <div class="contact-info">
                                 <p>
-                                    Copyright &copy; 2022 光明診所 健保特約復健診所| Design: Tooplate
-
+                                    <a href="https://www.facebook.com/kingsclinic/offers/?ref=page_internal" class="fa fa-facebook-square fa-5x" attr="facebook icon" target="_blank"></a>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                    <a href="tel:+886-2-28210197"><i class="fa fa-phone"></i>02-2821-0197</a>
+                                    <a href="mailto:Kuang_C@hotmail.com"><i class="fa fa-envelope-o"></i>Kuang_C@hotmail.com</a>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="footer-link">
+                    </div>
+                            <!-- GOOGLE MAP -->
+                            <section id="google-map">
+                                <!-- How to change your own map point
+                1. Go to Google Maps
+                2. Click on your location point
+                3. Click "Share" and choose "Embed map" tab
+                4. Copy only URL and paste it within the src="" field below-->
+                                <iframe style="margin-top: 10px; border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14450.047860563986!2d121.50801568501845!3d25.118376644183186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae8b74ca5835%3A0x552f01f3164e7850!2z5YWJ5piO6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1658202721874!5m2!1szh-TW!2stw" width="100%" height="350" frameborder="0" allowfullscreen></iframe>
+                            </section>
+                            <div class="col-md-12 col-sm-12 border-top">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="copyright-text" style="width:500px">
+                                        <p>
+                                            Copyright &copy; 2022 光明診所 健保特約復健診所| Design: Tooplate
 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="footer-link">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 text-align-center">
+                                    <div class="angle-up-btn">
+                                        <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 text-align-center">
-                            <div class="angle-up-btn">
-                                <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
-                            </div>
+
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </footer>
+</footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

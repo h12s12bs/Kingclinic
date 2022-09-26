@@ -4,14 +4,7 @@
 <html lang="en">
 <head>
 
-    <title>Health - Medical Website Template</title>
-    <!--
 
-    Template 2098 Health
-
-    http://www.tooplate.com/view/2098-health
-
-    -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
@@ -24,6 +17,8 @@
     <link rel="stylesheet" href="~/Content/animate.css">
     <link rel="stylesheet" href="~/Content/owl.carousel.css">
     <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Content/custom-style.css">
+
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="~/Content/tooplate-style.css">
@@ -60,7 +55,10 @@
                             <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OA knee Treatment Decision Support System</h2>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h3>個人資料：</h3>
+                            <label for="Reoperation">*本系統僅提供建議，實際狀況請至醫療院所經與專業醫師討論判斷為主。</label>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <h3>基本資料：</h3>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <label for="select"><i class="fa fa-intersex"></i>性別：</label>
@@ -109,13 +107,13 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="email">目標 2：最低可接受功能進步的週數</label>
                                 <select class="form-control" name="GOAL2">
-                                    <option value="3">3週</option>
-                                    <option value="6">6週</option>
-                                    <option value="12">12週</option>
-                                    <option value="26">26週</option>
-                                    <option value="36">36週</option>
-                                    <option value="48">48週</option>
-                                    <option value="52">52週</option>
+                                    <option value="0">3週</option>
+                                    <option value="0.136">6週</option>
+                                    <option value="0.245">12週</option>
+                                    <option value="0.5">26週</option>
+                                    <option value="0.7">36週</option>
+                                    <option value="0.925">48週</option>
+                                    <option value="1">52週</option>
                                 </select>
                                 @*<input type="email" class="form-control" id="email" name="email" placeholder="Week">*@
                             </div>
@@ -123,8 +121,9 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="date">目標 3：最高可接受的治療費用</label>
                                 <select class="form-control" name="GOAL3">
-                                    <option value="1">10,000</option>
-                                    <option value="0.8">20,000</option>
+                                    <option value="1">5,000</option>
+                                    <option value="0.95">10,000</option>
+                                    <option value="0.85">20,000</option>
                                     <option value="0.72">30,000</option>
                                     <option value="0.56">40,000</option>
                                     <option value="0.4">50,000</option>
@@ -136,28 +135,30 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">目標 4：最高可接受傷口感染的風險</label>
                                 <select class="form-control" name="GOAL4">
-                                    <option value="0">0%</option>
-                                    <option value="1.5">1.5%</option>
-                                    <option value="2">2%</option>
+                                    <option value="1">0%</option>
+                                    <option value="0.7">1%</option>
+                                    <option value="0.4">1.5%</option>
+                                    <option value="0.2">2%</option>
                                 </select>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">目標 5：最久可接受的治療時間</label>
                                 <select class="form-control" name="GOAL5">
-                                    <option value="3">3個月</option>
-                                    <option value="6">6個月</option>
-                                    <option value="9">9個月</option>
-                                    <option value="12">12個月</option>
+                                    <option value="1">0.25個月</option>
+                                    <option value="0.8">3個月</option>
+                                    <option value="0.7">6個月</option>
+                                    <option value="0.4">9個月</option>
+                                    <option value="0.1">12個月</option>
                                 </select>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">目標 6：最低可接受是非手術療法的可能</label>
                                 <select class="form-control" name="GOAL6">
-                                    <option value="0">0%</option>
-                                    <option value="25">25%</option>
-                                    <option value="50">50%</option>
-                                    <option value="70">70%</option>
-                                    <option value="100">100%</option>
+                                    <option value="0.2">0%</option>
+                                    <option value="0.4">25%</option>
+                                    <option value="0.6">50%</option>
+                                    <option value="0.8">70%</option>
+                                    <option value="1">100%</option>
                                 </select>
                             </div>
                             <div class="col-md-12 col-sm-12">
@@ -179,7 +180,7 @@
                                 <label for="Reoperation">可承受再次手術的可能：</label>
                                 <input type="text" class="form-control" id="Reoperation" name="Reoperation" placeholder="%">
                             </div>
-                            
+
                             <div class="col-md-12 col-sm-12">
                                 @*<label for="telephone">電話號碼</label>*@
                                 @*<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">*@
@@ -203,17 +204,7 @@
     </section>
 
 
-    <!-- GOOGLE MAP -->
-    @*<section id="google-map">*@
-    <!-- How to change your own map point
-            1. Go to Google Maps
-            2. Click on your location point
-            3. Click "Share" and choose "Embed map" tab
-            4. Copy only URL and paste it within the src="" field below
-    -->
-    @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14450.047860563986!2d121.50801568501845!3d25.118376644183186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae8b74ca5835%3A0x552f01f3164e7850!2z5YWJ5piO6Ki65omA!5e0!3m2!1szh-TW!2stw!4v1658202721874!5m2!1szh-TW!2stw" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>*@
-    @*</section>*@
-
+    
 
     <!-- SCRIPTS -->
     <script src="~/Scripts/jquery.js"></script>
@@ -224,40 +215,5 @@
     <script src="~/Scripts/smoothscroll.js"></script>
     <script src="~/Scripts/owl.carousel.min.js"></script>
     <script src="~/Scripts/custom.js"></script>
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-            $('#College').change(function() { ChangeCollege(); });
-        });
-
-        function submit() {
-            //取值
-            var SEX = $('#SEX').val();
-            var AGE = $('#AGE').val();
-            var WEIGHT = $('#WEIGHT').val();
-            var HEIGHT = $('#HEIGHT').val();
-            var KLSCALE = $('#KLSCALE').val();
-            var GOAL1 = $('#GOAL1').val();
-            var GOAL2 = $('#GOAL2').val();
-            var GOAL3 = $('#GOAL3').val();
-            var GOAL4 = $('#GOAL4').val();
-            var GOAL5 = $('#GOAL5').val();
-            var GOAL6 = $('#GOAL6').val();
-        
-            $.ajax({
-                url: '@Url.Action("SAVE","Controller")',
-                data: { college: college },
-                type: 'post',
-                cache: false,
-                async: false,
-                dataType: 'json',
-                success: function(data) {
-
-                    
-                }
-            });
-        }
-
-    </script>
 </body>
 </html>

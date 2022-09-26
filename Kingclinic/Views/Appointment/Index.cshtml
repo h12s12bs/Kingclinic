@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+@model List<Kingclinic.Models.Reservation>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tooplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
+    <link rel="stylesheet" href="~/Content/owl.carousel.css">
+    <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Content/custom-style.css">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="~/Content/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+    <!-- MAKE AN APPOINTMENT -->
+    <section id="appointment" data-stellar-background-ratio="3">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6">
+                    <img src="~/images/appointment-image.jpg" class="img-responsive" alt="">
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <!-- CONTACT FORM HERE -->
+                    <form id="appointment-form" role="form" method="post" action="Index">
+
+                        <!-- SECTION TITLE -->
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                            <h2>預約掛號</h2>
+                        </div>
+
+                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="col-md-6 col-sm-6">
+                                <label for="name">姓名</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <label for="telephone">電話號碼</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <label for="select">門診項目</label>
+                                <select class="form-control" name="program" id="program">
+                                    <option value="骨科">骨科</option>
+                                    <option value="外科">外科</option>
+                                    <option value="家庭醫學科">家庭醫學科</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <label for="date">預約日期</label>
+                                <input type="date" name="date" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <label for="date">預約時段</label>
+                                <input type="time" name="time" class="form-control">
+                            </div>
+
+                            <div class="col-md-12 col-sm-12">
+                                <label for="Message">症狀概述</label>
+                                <input type="text" class="form-control" id="message" name="message" placeholder="Message">
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <button type="submit" class="form-control" id="cf-submit" name="submit">預約</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- SCRIPTS -->
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.sticky.js"></script>
+    <script src="~/Scripts/jquery.stellar.min.js"></script>
+    <script src="~/Scripts/wow.min.js"></script>
+    <script src="~/Scripts/smoothscroll.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+
+
+
+</body>
+</html>

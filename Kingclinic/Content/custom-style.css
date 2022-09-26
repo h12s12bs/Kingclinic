@@ -1,0 +1,278 @@
+﻿@font-face {
+    font-family: 'PoiretOne-Regular';
+    src: url('../fonts/PoiretOne-Regular.ttf') format('truetype');
+}
+.main-title {
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+#ServiceArea {
+    padding: 0vh 15px 10vh;
+    overflow: hidden;
+}
+    #ServiceArea .service-box .service-pic {
+        border-radius: 100px;
+        background: #DCE4D7;
+        z-index: 1;
+        position: relative;
+        width: 135px;
+        margin: 0 auto 20px;
+    }
+.main-title h5 {
+    color: #9CC93A;
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    font-family: 'PoiretOne-Regular';
+}
+
+#ServiceArea .service-box {
+    padding: 0 2px 0;
+}
+#ServiceArea .service-box .service-text {
+        border: 1px #9CC93A solid;
+        border-radius: 25px;
+        padding: 80px 20px 20px;
+        margin-top: -80px;
+        min-height: 37vh;
+}
+#ServiceArea .service-box .service-text h4 {
+        color: #405545;
+        font-size: 22px;
+        margin: 0 auto 20px;
+        transition: all 0.3s ease-in-out;
+}
+.main-title h4 {
+    color: #405545;
+    font-size: 42px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    font-family: 'PoiretOne-Regular';
+}
+@media (max-width: 1199px){ 
+    #MainDoctorArea {
+    padding: 10vh 15px 10vh;
+    margin: 0;
+    border-radius: 0;
+}}
+@media (max-width: 991px) {
+    #MainDoctorArea .maindoc-text {
+    margin: auto;
+    width: 80%;
+}}
+    
+#MainDoctorArea {
+        padding: 10vh 18vh 10vh;
+        overflow: hidden;
+        background: #FEFCF6 url(/assets/frontend/images/index/maindoc-bg.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        border-radius: 50px;
+    }
+@media (max-width: 1199px) {
+    #MainDoctorArea .doc-pic {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}}
+#MainDoctorArea .doc-pic {
+    z-index: 1;
+    padding: 0 0 0 50px;
+}
+#MainDoctorArea .maindoc-text {
+    background-color: #fff;
+    padding: 8vh 3vw 8vh 8vw;
+    margin: 8vh 0 0 -10vw;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 20%);
+    width: 37vw;
+}
+#MainDoctorArea .maindoc-text h5 {
+    font-size: 30px;
+    color: #685744;
+    letter-spacing: 0.2vw;
+    margin-bottom: 30px;
+}
+#MainDoctorArea .maindoc-text .maindoc-box {
+    letter-spacing: 0.1vw;
+    font-size: 17px;
+}
+@media (max-width: 1199px) {
+    #MainDoctorArea .maindoc-text {
+    margin: 11vh 0 0 -8vw;
+    width: 50vw;
+}}
+#MainDoctorArea .maindoc-text .maindoc-box h5 {
+    background: #9CC93A;
+    padding: 4px 15px 4px;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+    font-size: 20px;
+    display: table;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+@media (max-width: 767px) {
+    .newsletter--bg {
+    background-position: right center;
+}}
+#MainDoctorArea .maindoc-text h5 span {
+    font-size: 20px;
+    color: #B8B8B8;
+}
+#MainDoctorArea .maindoc-text h4 {
+    font-size: 20px;
+    color: #B8B8B8;
+    letter-spacing: 0.1vw;
+}
+#MainDoctorArea .maindoc-text h5 {
+    font-size: 30px;
+    color: #685744;
+    letter-spacing: 0.2vw;
+    margin-bottom: 30px;
+}
+#MainDoctorArea .maindoc-text .maindoc-box {
+    letter-spacing: 0.1vw;
+    font-size: 17px;
+}
+#MainDoctorArea .maindoc-text .maindoc-box ul {
+    padding-left: 25px;
+    list-style: disc;
+    margin: 0;
+}
+.maindoc-text h4 {
+    font-size: 20px;
+    color:#9CC93A;
+    letter-spacing: 0.1vw;
+}
+.maindoc-text h5 {
+    font-size: 30px;
+    color: #405545;
+    letter-spacing: 0.1vw;
+}
+.maindoc-text span {
+        font-size: 20px;
+        color: #B8B8B8;
+}
+.maindoc-box h5 {
+    background: #9CC93A;
+    padding: 4px 15px 4px;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+    font-size: 20px;
+    display: table;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+.maindoc-box {
+    letter-spacing: .1vw;
+    font-size: 17px;
+}
+.maindoc-box ul {
+    padding-left: 25px;
+    list-style: disc;
+    margin: 0;
+    color: #405545;
+}
+}
+.service-time .table-responsive table tr td {
+    color: #405545;
+    padding: 15px;
+    background: rgba(0,0,0,0);
+    border-bottom: 1px #d5d0cb solid;
+    text-align: center;
+    white-space: nowrap;
+}
+.table-responsive table {
+    vertical-align: middle !important;
+}
+.service-time .table-responsive table tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+}
+.service-time .table-responsive table tr th {
+    background: #fff;
+    padding: 15px;
+    color: #405545;
+    border: none;
+    text-align: center;
+    white-space: nowrap;
+}
+.h-in-gtuttable th {
+    background: #685744;
+    color: #fff;
+}
+.h-in-gtuttable i{
+    color:#9CC93A;
+}
+.bar-title {
+    position: relative;
+    font-size: 30px;
+    letter-spacing: .3vw;
+    color: #405545;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    z-index: 1;
+    text-align:center;
+}
+@media (min-width: 768px) and (max-width: 991px) {.newsletter--bg {
+    background-position: right center;
+}}
+.bar-title:before {
+    content: "";
+    position: absolute;
+    background: #9CC93A;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50px;
+    opacity: .6;
+}
+.post_content p, .txtNormal p, .description p {
+    margin-bottom: 10px;
+}
+.post_content h4, .txtNormal h4, .description h4 {
+    font-size: 26px;
+    line-height: 1.4;
+    font-family: Arial,"微軟正黑體","Microsoft JhengHei";
+    color: #405545;
+    font-weight: 700;
+    letter-spacing: .2vw;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 0 0 0 25px;
+}
+.post_content h4:before, .txtNormal h4:before, .description h4:before {
+    content: "";
+    position: absolute;
+    /*background: #fdf7ea;*/
+    width: 70px;
+    height: 125px;
+    top: -103px;
+    left: 183PX;
+    z-index: -1;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+}
+.post_content h4:after, .txtNormal h4:after, .description h4:after {
+        content: "";
+    position: absolute;
+    /*background: #fdf7ea;*/
+    width: 70px;
+    height: 125px;
+    bottom: 15px;
+    left: 116px;
+    z-index: -1;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}

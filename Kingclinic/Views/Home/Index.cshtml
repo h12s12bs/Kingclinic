@@ -1,9 +1,7 @@
 ﻿<!DOCTYPE html>
-@model List<Kingclinic.Models.Reservation>
 <html lang="en">
 <head>
 
-    <title>Health - Medical Website Template</title>
     <!--
 
     Template 2098 Health
@@ -23,6 +21,11 @@
     <link rel="stylesheet" href="~/Content/animate.css">
     <link rel="stylesheet" href="~/Content/owl.carousel.css">
     <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Content/custom-style.css">
+
+
+
+
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="~/Content/tooplate-style.css">
@@ -48,9 +51,9 @@
                     <div class="item item-first">
                         <div class="caption">
                             <div class="col-md-offset-1 col-md-10">
-                                <h3>Let's make your life happier</h3>
-                                <h1>Healthy Living</h1>
-                                <a href="#team" class="section-btn btn btn-default smoothScroll">Meet Our Doctors</a>
+                                <h3 style="font-family: PoiretOne-Regular;">光明診所 健保特約復健診所</h3>
+                                <h1 class="wow fadeInUp" style="font-family: PoiretOne-Regular;" data-wow-delay="0.1s">King's Clinic</h1>
+                                <a href="~/Team/Index" class="section-btn btn btn-default smoothScroll">Meet Our Doctors</a>
                             </div>
                         </div>
                     </div>
@@ -58,9 +61,9 @@
                     <div class="item item-second">
                         <div class="caption">
                             <div class="col-md-offset-1 col-md-10">
-                                <h3>Aenean luctus lobortis tellus</h3>
-                                <h1>New Lifestyle</h1>
-                                <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                <h3 style="font-family: PoiretOne-Regular;">專業骨科、細心呵護、安心信任</h3>
+                                <h1 class="wow fadeInUp" style="font-family: PoiretOne-Regular;" data-wow-delay="0.1s">Profession Care Trust</h1>
+                                <a href="~/About/Index" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
                             </div>
                         </div>
                     </div>
@@ -68,9 +71,9 @@
                     <div class="item item-third">
                         <div class="caption">
                             <div class="col-md-offset-1 col-md-10">
-                                <h3>Pellentesque nec libero nisi</h3>
-                                <h1>Your Health Benefits</h1>
-                                <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
+                                <h3 style="font-family: PoiretOne-Regular;">高品質醫療服務，解決您各種疼痛問題</h3>
+                                <h1 class="wow fadeInUp" style="font-family: PoiretOne-Regular;" data-wow-delay="0.1s">High Quality Care</h1>
+                                <a href="~/News/Index" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
                             </div>
                         </div>
                     </div>
@@ -82,146 +85,334 @@
 
 
     <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-6 col-sm-6">
-                    <div class="about-info">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.4s">Welcome to <i class="fa fa-h-square"></i>光明診所</h2>
-                        <div class="wow fadeInUp" data-wow-delay="0.6s">
-                            <h3><i class="fa fa-hospital-o fa-2x"></i>&nbsp;&nbsp;本院門診</h3>
-                            <ul class="about">
-
-                                <li>
-                                    <p class="about">骨科</p>
-                                </li>
-                                <li>
-                                    <p class="about">外科</p>
-                                </li>
-                                <li>
-                                    <p class="about">家庭醫學科</p>
-                                </li>
-                            </ul>
+    @*<section id="about" data-stellar-background-ratio="0.75">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <div class="about-info main-title">
+                            <h4 class="wow fadeInUp" data-wow-delay="0.1s">Welcome to <i class="fa fa-h-square"></i>光明診所</h4><h5 class="wow fadeInUp" data-wow-delay="0.1s">About King's Clinic</h5>
                         </div>
-                        <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                            <img src="~/images/Fundercirclewhite.png" class="img-responsive" alt="">
-                            <figcaption>
-                                <h3>張光明 醫師</h3>
-                                <p>&nbsp;&nbsp;院長 榮總專科醫師主治</p>
-                                <ul>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="about-info">
+
+                            <div class="wow fadeInUp" data-wow-delay="0.6s">
+                                <h3 style="color:#9CC93A"><i class="fa fa-hospital-o fa-2x"></i>&nbsp;&nbsp;本院門診</h3>
+                                <ul class="about">
+
                                     <li>
-                                        <p class="about">體外震波疼痛治療</p>
+                                        <p class="about">骨科</p>
                                     </li>
                                     <li>
-                                        <p class="about">嚴重骨質疏鬆治療</p>
+                                        <p class="about">外科</p>
                                     </li>
                                     <li>
-                                        <p class="about">復健治療</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">針灸電針疼痛治療</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">肩、膝玻尿酸注射</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">骨科術後骨頭保健</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">生化雷射淨血療法</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">癌症疼痛控制治療</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">塑身體雕中西療法</p>
-                                    </li>
-                                    <li>
-                                        <p class="about">淡斑、美白、除毛</p>
+                                        <p class="about">家庭醫學科</p>
                                     </li>
                                 </ul>
-                            </figcaption>
-                        </figure>
+                            </div>
+                            <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                <img src="~/images/Funder.png" class="img-responsive" alt="">
+                                <figcaption>
+                                    <h3>張光明 醫師</h3>
+                                    <p>&nbsp;&nbsp;院長 榮總專科醫師主治</p>
+                                    <ul>
+                                        <li>
+                                            <p class="about">體外震波疼痛治療</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">嚴重骨質疏鬆治療</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">復健治療</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">針灸電針疼痛治療</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">肩、膝玻尿酸注射</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">骨科術後骨頭保健</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">生化雷射淨血療法</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">癌症疼痛控制治療</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">塑身體雕中西療法</p>
+                                        </li>
+                                        <li>
+                                            <p class="about">淡斑、美白、除毛</p>
+                                        </li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
+        </section>*@
+    <section id="AboutArea" class="wn__newsletter__area newsletter--bg">
+       <div class="container">
+            <div class="main-title text-center">
+                <h4>關於光明診所</h4>
+                <h5> About King's Clinic </h5>
+            </div>
+         <div class="row">
+             <div class="col-md-4 col-sm-6 text-center wow fadeInUp" data-wow-delay="0.2s">
+                 <img src="~/images/healthcare.png" class="img-responsive" alt="" style="text-align:center">
+                 <h4 class="bar-title">溫暖用心</h4>
+                 <div class="description">
+                     <p></p>
+                     <h4>在石牌像家一樣的診所</h4>
+                     <p></p>
+                 </div>
+             </div>
+             <div class="col-md-4 col-sm-6 text-center wow fadeInUp" data-wow-delay="0.4s">
+                 <img src="~/images/WESWT-1.png" class="img-responsive" alt="" style="text-align:center">
+                 <h4 class="bar-title">值得信賴</h4>
+                 <div class="description">
+                     <p></p>
+                     <h4>高品質專業的醫療</h4>
+                     <p></p>
+                 </div>
+             </div>
+             <div class="col-md-4 col-sm-6 text-center wow fadeInUp" data-wow-delay="0.6s">
+                 <i class="fa fa-user-md fa-5x"></i>
+                 <h4 class="bar-title">耐心親切</h4>
+                 <div class="description">
+                     <p></p>
+                     <h4>健康生活由光明點亮</h4>
+                     <p></p>
+                 </div>
+             </div>
+         </div>
+       </div>
     </section>
 
-
     <!-- TEAM -->
+    @*<section id="MainDoctorArea" class="wn__newsletter__area newsletter--bg">
+                <div class="container-fluid">
+                    <div class="main-title text-center">
+                        <h4> 院長介紹 </h4><h5> Dr.Chang </h5>
+                    </div>
+                    <div class="row">
+                        <div class="doc-pic text-center col-xl-7 col-lg-6 col-md-12">
+                            <img data-src="" alt="院長介紹" title="院長介紹" class="loaded" src="~/images/Fundercirclewhite1.png" data-was-processed="true">
+                        </div>
+                        <div class="col-xl-5 col-lg-6 col-md-12">
+                            <div class="maindoc-text">
+                                <h4> 光明診所院長 </h4>
+                                <h5> 張光明 <span>醫師</span></h5>
+                                <div class="maindoc-box mb-3">
+                                    <h5>治療項目：</h5>骨外科、體外震波、家庭醫學、骨質疏鬆、專科治療
+                                </div>
+                                <div class="maindoc-box">
+                                    <h5>學經歷：</h5>
+                                    <ul>
+                                        <li>
+                                            中華民國骨科專科醫師
+                                        </li>
+                                        <li>
+                                            中華民國外科專科醫師
+                                        </li>
+                                        <li>
+                                            中華民國家庭醫學科專科醫師
+                                        </li>
+                                        <li>
+                                            中華民國骨質疏鬆症學會專科醫師
+                                        </li>
+                                        <li>
+                                            中華民國美容醫學醫學會會員
+                                        </li>
+                                        <li>
+                                            中華民國超音波專科醫師
+                                        </li>
+                                        <li>
+                                            中華針灸醫學會專科醫師
+                                        </li>
+                                        <li>
+                                            中西整合醫學會專科醫師
+                                        </li>
+                                        <li>
+                                            振興醫院骨科部特約主治醫師
+                                        </li>
+                                        <li>
+                                            台北榮民總醫院特約主治醫師
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-primary" href="/doctor"> More </a>
+                    </div>
+                </div>
+        </section>*@
     <section id="team" data-stellar-background-ratio="1">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-6 col-sm-6">
-                    <div class="about-info">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.1s">醫師團隊</h2>
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="about-info main-title">
+                        <h4 class="wow fadeInUp" data-wow-delay="0.1s">院長介紹</h4><h5 class="wow fadeInUp" data-wow-delay="0.1s">Dr.Chang</h5>
                     </div>
                 </div>
 
                 <div class="clearfix"></div>
 
-                <div class="col-md-4 col-sm-6">
+                <div class="doc-pic text-center col-md-4 col-sm-6">
 
                     <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="~/images/Funder.jpg" class="img-responsive" alt="" style="text-align:center">
-                        <hr id="line">
-                        <div class="team-info">
-                            <h3>張光明 醫師</h3>
-                            <p>院長 榮總專科醫師主治</p>
+                        <img src="~/images/Funder.png" class="img-responsive" alt="" style="text-align:center">
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="maindoc-text">
+                        <h4>光明診所院長</h4>
+                        <h5>張光明 <span>醫師 榮總專科醫師主治</span></h5>
+
+
+                        <div class="col-md-5 col-sm-4 maindoc-box mb-3">
+                            <h5>治療項目：</h5><p>骨科、骨質疏鬆、外科<br />家庭醫學、運動傷害</p>
+                        </div>
+                        <div class="col-md-7 col-sm-4 maindoc-box mb-3">
+                            <h5>專長：</h5><p>聚焦式體外震波、PRP再生醫學<br />玻尿酸注射、復健治療</p>
+                        </div>
+                        <div class="col-md-5 col-sm-4 maindoc-box">
+                            <h5>現職：</h5>
                             <ul>
                                 <li>
-                                    <p>中華民國骨科專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>中華民國外科專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>中華民國家庭醫學科專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>中華民國骨質疏鬆症學會專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>中華民國美容醫學醫學會會員</p>
-                                </li>
-                                <li>
-                                    <p>中華民國超音波專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>中華針灸醫學會專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>中西整合醫學會專科醫師</p>
-                                </li>
-                                <li>
-                                    <p>振興醫院骨科部特約主治醫師</p>
-                                </li>
-                                <li>
-                                    <p>台北榮民總醫院特約主治醫師</p>
+                                    光明診所 院長
                                 </li>
                             </ul>
-                            <div class="team-contact-info">
+                        </div>
+                        <div class="col-md-7 col-sm-4 maindoc-box">
+                            <h5>學經歷：</h5>
+                            <ul>
+                                <li>
+                                    中華民國骨科專科醫師
+                                </li>
+                                <li>
+                                    中華民國外科專科醫師
+                                </li>
+                                <li>
+                                    中華民國家庭醫學科專科醫師
+                                </li>
+                                <li>
+                                    中華民國骨質疏鬆症學會專科醫師
+                                </li>
+                                <li>
+                                    中華民國美容醫學醫學會會員
+                                </li>
+                                <li>
+                                    中華民國超音波專科醫師
+                                </li>
+                                <li>
+                                    中華針灸醫學會專科醫師
+                                </li>
+                                <li>
+                                    中西整合醫學會專科醫師
+                                </li>
+                                <li>
+                                    振興醫院骨科部特約主治醫師
+                                </li>
+                                <li>
+                                    台北榮民總醫院特約主治醫師
+                                </li>
+                            </ul>
+                        </div>
+                        @*<div class="team-contact-info">
                                 <p> <a href="tel:+886-2-28210197"><i class="fa fa-phone"></i>02-2821-0197</a></p>
                                 <p> <a href="mailto:Kuang_C@hotmail.com"><i class="fa fa-envelope-o"></i>Kuang_C@hotmail.com</a></p>
                             </div>
                             <ul class="social-icon">
                                 <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                 <li><a href="mailto:Kuang_C@hotmail.com" class="fa fa-envelope-o"></a></li>
-                            </ul>
-                        </div>
-
+                            </ul>*@
                     </div>
-
                 </div>
-
             </div>
+        </div>
+        <div class="team-contact-info">
         </div>
     </section>
 
+    <section id="ServiceArea" data-stellar-background-ratio="2">
+        <div class="container">
+            <div class="main-title text-center">
+                <h4 class="wow fadeInUp" data-wow-delay="0.1s"> 診療項目 </h4><h5 class="wow fadeInUp" data-wow-delay="0.1s"> Service </h5>
+            </div>
+            <div class="row" style="margin-right:30px;">
+                <div class="col-md-4 col-sm-6 service-box wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-pic">
+                        <div class="text-center">
+                            <img data-src="/images/WESWT.png" alt="體外震波治療" title="體外震波治療" class="initial loaded" src="~/images/WESWT.png" data-was-processed="true">
+                        </div>
+                    </div>
+                    <a href="/service-item-1-page70">
+                        <div class="service-text">
+                            <h4 class="text-center"> ESWT<br>聚焦式體外震波治療 </h4>
+                            <div class="maindoc-box">
+                                <ul>
+                                    <li>非侵入性、免打針、免吃藥、免麻醉、免開刀、無放射性的治療方式</li>
+                                    <li>把壓力及能量聚焦傳遞到慢性發炎或已鈣化的骨骼或軟組織上</li>
+                                    <li>針對慢性肌腱發炎及筋膜慢性疼痛做處理</li>
+                                    <li>促使組織代謝循環、微血管新生，達到組織再生及修復的功能</li>
+                                    <li>緩解疼痛症狀，改善生活品質</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 service-box wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-pic">
+                        <div class="text-center">
+                            <img data-src="/images/PRP.png" alt="PRP再生治療" title="PRP再生治療" class="initial loaded" src="~/images/PRP.png" data-was-processed="true">
+                        </div>
+                    </div>
+                    <a href="/service-item-1-page70">
+                        <div class="service-text">
+                            <h4 class="text-center">PRP<br>再生醫學治療</h4>
+                            <div class="maindoc-box">
+                                <ul>
+                                    <li>PRP 全名叫 Platelet-Rich Plasma （富含血小板的血漿)</li>
+                                    <li>血小板內富含各種生長因子，包含 FGF、PDGF、TGF-B、EGF、VEGF、IGF</li>
+                                    <li>施打在受傷的部位，促進軟組織修復再生，從根源解決各種肌骨退化疼痛問題</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 service-box wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="service-pic">
+                        <div class="text-center">
+                            <img data-src="/images/HAinject.png" alt="玻尿酸注射治療" title="玻尿酸注射治療" class="initial loaded" src="~/images/HAinject.png" data-was-processed="true">
+                        </div>
+                    </div>
+                    <a href="/service-item-1-page70">
+                        <div class="service-text">
+                            <h4 class="text-center">H/A<br>玻尿酸注射治療 </h4>
+                            <div class="maindoc-box">
+                                <ul>
+                                    <li>「玻尿酸」(Sodium hyaluronate)是一種關節保養劑直接注入退化的關節內</li>
+                                    <li>具有高度的保水性、黏彈性和潤滑作用</li>
+                                    <li>對關節軟骨有親和性，可覆蓋於軟骨表面保護軟骨，防止磨損及退化</li>
+                                    <li>抑制發炎反應，改善關節攣縮，增加關節活動度</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- NEWS -->
     <section id="news" data-stellar-background-ratio="2.5">
@@ -230,21 +421,22 @@
 
                 <div class="col-md-12 col-sm-12">
                     <!-- SECTION TITLE -->
-                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                        <h2>最新消息</h2>
+                    <div class="main-title text-center wow fadeInUp">
+                        <h4> 最新消息 </h4><h5> News</h5>
                     </div>
+
                 </div>
 
                 <div class="col-md-4 col-sm-6">
                     <!-- NEWS THUMB -->
                     <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
                         <a href="~/News/Index">
-                            <img src="~/images/news-image1.jpg" class="img-responsive" alt="">
+                            <img src="~/images/WESWTH.jpg" class="img-responsive" alt="">
                         </a>
                         <div class="news-info">
                             <span>March 08, 2018</span>
-                            <h3><a href="~/News/Index">About Amazing Technology</a></h3>
-                            <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+                            <h3><a href="~/News/Index">體外震波治療</a></h3>
+                            <p>來自德國WOLF治療機，高階醫療工藝的代表。效率高、效果好，除了幫助止痛，更促進組織修復！</p>
                             <div class="author">
                                 <img src="~/images/author-image.jpg" class="img-responsive" alt="">
                                 <div class="author-info">
@@ -303,67 +495,7 @@
     </section>
 
 
-    <!-- MAKE AN APPOINTMENT -->
-    <section id="appointment" data-stellar-background-ratio="3">
-        <div class="container">
-            <div class="row">
 
-                <div class="col-md-6 col-sm-6">
-                    <img src="~/images/appointment-image.jpg" class="img-responsive" alt="">
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-                    <!-- CONTACT FORM HERE -->
-                    <form id="appointment-form" role="form" method="post" action="Index">
-
-                        <!-- SECTION TITLE -->
-                        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                            <h2>預約掛號</h2>
-                        </div>
-
-                        <div class="wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="col-md-6 col-sm-6">
-                                <label for="name">姓名</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <label for="date">日期</label>
-                                <input type="datetime-local" name="date" class="form-control">
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <label for="select">門診項目</label>
-                                <select class="form-control" name="program" id="program">
-                                    <option value="骨科">骨科</option>
-                                    <option value="外科">外科</option>
-                                    <option value="家庭醫學科">家庭醫學科</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-12 col-sm-12">
-                                <label for="telephone">電話號碼</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <label for="Message">症狀概述</label>
-                                <input type="text" class="form-control" id="message" name="message" placeholder="Message">
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <button type="submit" class="form-control" id="cf-submit" name="submit">預約</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
 
 

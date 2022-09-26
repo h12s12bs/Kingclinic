@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using System.Data.SqlClient;
 using System.Text;
 using Kingclinic.Models;
-using LpSolveDotNet;
 using System.Diagnostics;
 using Google.OrTools.LinearSolver;
 using OrToolsMilpManager;
@@ -26,26 +25,7 @@ namespace Kingclinic.Controllers
 
         }
         [HttpPost]
-        //public ActionResult Index(string SEX, string AGE, string WEIGHT, string HEIGHT, string KLSCALE, string GOAL1, string GOAL2, string GOAL3, string GOAL4, string GOAL5, string GOAL6)
-        //{
-            //var receiveSEX = SEX;
-            //var receiveAGE = AGE;
-            //var receiveWEIGHT = WEIGHT;
-            //var receiveHEIGHT = HEIGHT;
-            //var receiveKLSCALE = KLSCALE;
-            //var receiveGOAL1 = GOAL1;
-            //var receiveGOAL2 = GOAL2;
-            //var receiveGOAL3 = GOAL3;
-            //var receiveGOAL4 = GOAL4;
-            //var receiveGOAL5 = GOAL5;
-            //var receiveGOAL6 = GOAL6;
-
-
-
-
-            //return View();
-            
-        //}
+        
         public ActionResult Index(FormCollection post)
         {
             ViewBag.SEX = post["SEX"];
@@ -80,7 +60,7 @@ namespace Kingclinic.Controllers
             Solver solver = Solver.CreateSolver("AHPMCGPOAknee", "CBC_MIXED_INTEGER_PROGRAMMING");
             if (solver is null)
             {
-                Response.Write("失敗");
+                Response.Redirect("~/TDDSRESULT/IndexERROR");
             }
 
             // x and y are integer non-negative variables.
@@ -210,7 +190,7 @@ namespace Kingclinic.Controllers
             //g2 <= 1;
             solver.Add(0.1 * x1 + 0.17 * x2 + 0.25 * x3 + x4 + 0.5 * x5 + x6 + 0.25 * x7 + 0.7 * x8 + x9 + d2n - d2p == g2);
             solver.Add(g2 - e2p + e2n == 1);
-            solver.Add(0.5 <= g2);
+            solver.Add(g2s <= g2);
             solver.Add(g2 <= 1);
 
             //G3:
@@ -230,7 +210,7 @@ namespace Kingclinic.Controllers
             //g4 <= 1;
             solver.Add(x1 + x2 + x3 + x4 + 0.7 * x5 + 0.7 * x6 + 0.7 * x7 + 0.4 * x8 + 0.2 * x9 + d4n - d4p == g4);
             solver.Add(g4 - e4p + e4n == 1);
-            solver.Add(0.7 <= g4);
+            solver.Add(g4s <= g4);
             solver.Add(g4 <= 1);
 
             //G5:
@@ -240,7 +220,7 @@ namespace Kingclinic.Controllers
             //g5 <= 1;
             solver.Add(0.95 * x1 + 0.91 * x2 + 0.91 * x3 + 0.8 * x4 + 0.87 * x5 + 0.95 * x6 + x7 + 0.65 * x8 + 0.1 * x9 + d5n - d5p == g5);
             solver.Add(g5 - e5p + e5n == 1);
-            solver.Add(0.87 <= g5);
+            solver.Add(g5s <= g5);
             solver.Add(g5 <= 1);
 
             //G6:
@@ -250,7 +230,7 @@ namespace Kingclinic.Controllers
             //g6 <= 1;
             solver.Add(x1 + x2 + x3 + x4 + x5 + x6 + x7 + 0.2 * x8 + 0.2 * x9 + d6n - d6p == g6);
             solver.Add(g6 - e6p + e6n == 1);
-            solver.Add(1 <= g6);
+            solver.Add(g6s <= g6);
             solver.Add(g5 <= 1);
 
             //x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 = 1;
@@ -295,51 +275,41 @@ namespace Kingclinic.Controllers
             Response.Write("x9 = " + x9.SolutionValue() + "\n");
 
 
-            List<string> results=new List<string>();
             if (x1.SolutionValue() == 1)
             {
-                Response.Write("保守性療法");
-                results.Add("保守性療法");
+                Response.Redirect("~/TDSSRESULT/IndexCT");
             }
             else if(x2.SolutionValue()==1)
             {
-                Response.Write("物理治療");
-                results.Add("物理治療");
+                Response.Redirect("~/TDSSRESULT/IndexPT");
             }
             else if (x3.SolutionValue() == 1)
             {
-                Response.Write("輔具療法");
-                results.Add("輔具療法");
+                Response.Redirect("~/TDSSRESULT/IndexAT");
             }
             else if (x4.SolutionValue() == 1)
             {
-                Response.Write("體外震波療法");
-                results.Add("體外震波療法");
+                Response.Redirect("~/TDSSRESULT/IndexESWT");
             }
             else if (x5.SolutionValue() == 1)
             {
-                Response.Write("玻尿酸注射");
-                results.Add("玻尿酸注射");
+                Response.Redirect("~/TDSSRESULT/IndexHA");
             }
             else if (x6.SolutionValue() == 1)
             {
-                Response.Write("PRP注射");
-                results.Add("PRP注射");
+                Response.Redirect("~/TDSSRESULT/IndexPRP");
             }
             else if (x7.SolutionValue() == 1)
             {
-                Response.Write("類固醇注射");
-                results.Add("類固醇注射");
+                Response.Redirect("~/TDSSRESULT/IndexSI");
             }
             else if (x8.SolutionValue() == 1)
             {
-                Response.Write("非關節置換術");
-                results.Add("非關節置換術");
+                Response.Redirect("~/TDSSRESULT/IndexNTKA");
             }
             else if (x9.SolutionValue() == 1)
             {
-                Response.Write("關節置換術");
-                results.Add("關節置換術");
+                Response.Redirect("~/TDSSRESULT/IndexTKA");
             }
 
             //Response.Write("\nAdvanced usage:");

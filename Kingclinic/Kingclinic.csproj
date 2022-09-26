@@ -94,9 +94,6 @@
     <Reference Include="LineLoginCSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LineLogin.CSharp.0.1.1\lib\LineLoginCSharp.dll</HintPath>
     </Reference>
-    <Reference Include="LpSolveDotNet, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LpSolveDotNet.4.0.0\lib\net471\LpSolveDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
     </Reference>
@@ -432,9 +429,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\TDSSController.cs" />
+    <Compile Include="Controllers\TDSSRESULTController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -464,6 +465,7 @@
   <ItemGroup>
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom-style.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\owl.carousel.css" />
     <Content Include="Content\owl.theme.default.min.css" />
@@ -479,22 +481,22 @@
     <Content Include="images\about-bg.jpg" />
     <Content Include="images\appointment-image.jpg" />
     <Content Include="images\author-image.jpg" />
-    <Content Include="images\Funder.jpg" />
-    <Content Include="images\Fundercircle.png" />
-    <Content Include="images\Fundercirclewhite.png" />
+    <Content Include="images\Funder.png" />
+    <Content Include="images\HAinject.png" />
+    <Content Include="images\healthcare.png" />
     <Content Include="images\King%27sClinic.ico" />
     <Content Include="images\Kingscliniclogo.jpg" />
-    <Content Include="images\KLSCALE.png" />
     <Content Include="images\news-image.jpg" />
     <Content Include="images\news-image1.jpg" />
     <Content Include="images\news-image2.jpg" />
     <Content Include="images\news-image3.jpg" />
+    <Content Include="images\PRP.png" />
     <Content Include="images\slider1.jpg" />
     <Content Include="images\slider2.jpg" />
     <Content Include="images\slider3.jpg" />
-    <Content Include="images\team-image1.jpg" />
-    <Content Include="images\team-image2.jpg" />
-    <Content Include="images\team-image3.jpg" />
+    <Content Include="images\WESWT-1.png" />
+    <Content Include="images\WESWT.png" />
+    <Content Include="images\WESWTH.jpg" />
     <Content Include="Models\KingsClinic.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>KingsClinic.Context.cs</LastGenOutput>
@@ -550,9 +552,11 @@
     <Content Include="constraint_solver\demon_profiler.proto" />
     <Content Include="constraint_solver\assignment.proto" />
     <Content Include="bop\bop_parameters.proto" />
+    <Content Include="fonts\Courgette-Regular.ttf" />
+    <Content Include="fonts\MsMadi-Regular.ttf" />
+    <Content Include="fonts\PoiretOne-Regular.ttf" />
     <None Include="packages.config" />
     <Content Include="Views\TDSS\Index.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
     <Content Include="util\optional_boolean.proto" />
     <Content Include="sat\sat_parameters.proto" />
     <Content Include="sat\cp_model_service.proto" />
@@ -560,6 +564,20 @@
     <Content Include="sat\boolean_problem.proto" />
     <Content Include="pdlp\solve_log.proto" />
     <Content Include="pdlp\solvers.proto" />
+    <Content Include="Views\TDSSRESULT\IndexCT.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexPT.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexAT.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexESWT.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexHA.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexPRP.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexSI.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexNTKA.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexTKA.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexERROR.cshtml" />
+    <Content Include="Views\Appointment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -635,9 +653,7 @@
       <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\LpSolveDotNet.Native.win-x86.4.0.0\build\LpSolveDotNet.Native.win-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LpSolveDotNet.Native.win-x86.4.0.0\build\LpSolveDotNet.Native.win-x86.targets'))" />
   </Target>
-  <Import Project="..\packages\LpSolveDotNet.Native.win-x86.4.0.0\build\LpSolveDotNet.Native.win-x86.targets" Condition="Exists('..\packages\LpSolveDotNet.Native.win-x86.4.0.0\build\LpSolveDotNet.Native.win-x86.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
