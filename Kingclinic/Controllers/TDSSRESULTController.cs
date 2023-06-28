@@ -45,6 +45,10 @@ namespace Kingclinic.Controllers
         {
             return View();
         }
+        public ActionResult IndexHAEN()
+        {
+            return View();
+        }
         public ActionResult IndexERROR()
         {
             return View();

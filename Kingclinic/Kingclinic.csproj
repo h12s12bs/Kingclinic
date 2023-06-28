@@ -46,6 +46,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.8.0\lib\net462\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.MachineLearning.3.8.0\lib\net462\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net462\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net462\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Statistics.3.8.0\lib\net462\Accord.Statistics.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -436,6 +451,7 @@
     <Compile Include="Controllers\TDSSController.cs" />
     <Compile Include="Controllers\TDSSRESULTController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\WanHuaHomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -453,9 +469,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KingsClinic.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Reservation.cs">
-      <DependentUpon>KingsClinic.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TreatmentSelection.cs">
       <DependentUpon>KingsClinic.tt</DependentUpon>
@@ -481,22 +494,36 @@
     <Content Include="images\about-bg.jpg" />
     <Content Include="images\appointment-image.jpg" />
     <Content Include="images\author-image.jpg" />
+    <Content Include="images\ESWTintroduce.png" />
     <Content Include="images\Funder.png" />
+    <Content Include="images\HA.jpg" />
     <Content Include="images\HAinject.png" />
     <Content Include="images\healthcare.png" />
     <Content Include="images\King%27sClinic.ico" />
     <Content Include="images\Kingscliniclogo.jpg" />
+    <Content Include="images\KuangMingMedicineGroup.png" />
+    <Content Include="images\linelogo.png" />
     <Content Include="images\news-image.jpg" />
     <Content Include="images\news-image1.jpg" />
     <Content Include="images\news-image2.jpg" />
     <Content Include="images\news-image3.jpg" />
+    <Content Include="images\opemtime.png" />
+    <Content Include="images\Osteoporosis.png" />
+    <Content Include="images\osteoporosischeck.png" />
+    <Content Include="images\osteoporosiscomparison.png" />
+    <Content Include="images\Preloadlogo.png" />
     <Content Include="images\PRP.png" />
+    <Content Include="images\PRP1.png" />
     <Content Include="images\slider1.jpg" />
     <Content Include="images\slider2.jpg" />
     <Content Include="images\slider3.jpg" />
     <Content Include="images\WESWT-1.png" />
     <Content Include="images\WESWT.png" />
     <Content Include="images\WESWTH.jpg" />
+    <Content Include="images\WESWTT1.png" />
+    <Content Include="images\WESWTT2.png" />
+    <Content Include="images\WESWTT3.png" />
+    <Content Include="images\WESWTT4.png" />
     <Content Include="Models\KingsClinic.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>KingsClinic.Context.cs</LastGenOutput>
@@ -509,6 +536,8 @@
     </Content>
     <Content Include="orLogo.png" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.stellar.min.js" />
@@ -578,6 +607,15 @@
     <Content Include="Views\TDSSRESULT\IndexTKA.cshtml" />
     <Content Include="Views\TDSSRESULT\IndexERROR.cshtml" />
     <Content Include="Views\Appointment\Index.cshtml" />
+    <Content Include="Views\News\IndexESWT.cshtml" />
+    <Content Include="Views\News\IndexOT.cshtml" />
+    <Content Include="Views\News\IndexOSP.cshtml" />
+    <Content Include="Views\News\IndexPRP.cshtml" />
+    <Content Include="Views\News\IndexHA.cshtml" />
+    <Content Include="Views\TDSS\IndexCTDSS.cshtml" />
+    <Content Include="Views\TDSSRESULT\IndexHAEN.cshtml" />
+    <Content Include="Views\WanHuaHome\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutWanHua.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -653,7 +691,9 @@
       <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
   </Target>
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -5,18 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="KingsClinicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Reservation">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NAME" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="EMAIL" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="DATE" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="PROGRAM" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="PHONE" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="SYMPTOM" Type="nchar" MaxLength="10" Nullable="false" />
-        </EntityType>
         <EntityType Name="TreatmentSelection">
           <Key>
             <PropertyRef Name="ID" />
@@ -33,9 +21,17 @@
           <Property Name="GOAL4" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="GOAL5" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="GOAL6" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY1" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY2" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY3" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY4" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY5" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY6" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY7" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY8" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FUZZY9" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityContainer Name="KingsClinicModelStoreContainer">
-          <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TreatmentSelection" EntityType="Self.TreatmentSelection" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -44,7 +40,6 @@
       <Schema Namespace="KingsClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="KingsClinicEntities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="TreatmentSelection" EntityType="KingsClinicModel.TreatmentSelection" />
-          <EntitySet Name="Reservation" EntityType="KingsClinicModel.Reservation" />
         </EntityContainer>
         <EntityType Name="TreatmentSelection">
           <Key>
@@ -62,18 +57,15 @@
           <Property Name="GOAL4" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="GOAL5" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="GOAL6" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Reservation">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NAME" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="DATE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="PROGRAM" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="PHONE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="SYMPTOM" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY1" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY2" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY3" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY4" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY5" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY6" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY7" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY8" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FUZZY9" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -84,6 +76,15 @@
           <EntitySetMapping Name="TreatmentSelection">
             <EntityTypeMapping TypeName="KingsClinicModel.TreatmentSelection">
               <MappingFragment StoreEntitySet="TreatmentSelection">
+                <ScalarProperty Name="FUZZY9" ColumnName="FUZZY9" />
+                <ScalarProperty Name="FUZZY8" ColumnName="FUZZY8" />
+                <ScalarProperty Name="FUZZY7" ColumnName="FUZZY7" />
+                <ScalarProperty Name="FUZZY6" ColumnName="FUZZY6" />
+                <ScalarProperty Name="FUZZY5" ColumnName="FUZZY5" />
+                <ScalarProperty Name="FUZZY4" ColumnName="FUZZY4" />
+                <ScalarProperty Name="FUZZY3" ColumnName="FUZZY3" />
+                <ScalarProperty Name="FUZZY2" ColumnName="FUZZY2" />
+                <ScalarProperty Name="FUZZY1" ColumnName="FUZZY1" />
                 <ScalarProperty Name="GOAL6" ColumnName="GOAL6" />
                 <ScalarProperty Name="GOAL5" ColumnName="GOAL5" />
                 <ScalarProperty Name="GOAL4" ColumnName="GOAL4" />
@@ -95,19 +96,6 @@
                 <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
                 <ScalarProperty Name="AGE" ColumnName="AGE" />
                 <ScalarProperty Name="SEX" ColumnName="SEX" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Reservation">
-            <EntityTypeMapping TypeName="KingsClinicModel.Reservation">
-              <MappingFragment StoreEntitySet="Reservation">
-                <ScalarProperty Name="SYMPTOM" ColumnName="SYMPTOM" />
-                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
-                <ScalarProperty Name="PROGRAM" ColumnName="PROGRAM" />
-                <ScalarProperty Name="DATE" ColumnName="DATE" />
-                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-                <ScalarProperty Name="NAME" ColumnName="NAME" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

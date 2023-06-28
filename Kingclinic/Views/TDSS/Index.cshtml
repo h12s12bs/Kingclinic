@@ -29,9 +29,8 @@
     <!-- PRE LOADER -->
     <section class="preloader">
         <div class="spinner">
-
-            <span class="spinner-rotate"></span>
-
+            <img src="~/images/Preloadlogo.png" class="img-responsive" alt="" style="text-align:center;width:100px;height:100px;">
+            <span class="spinner-rotate" style="text-align:center;"></span>
         </div>
     </section>
 
@@ -51,14 +50,14 @@
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                            <h2><i class="fa fa-hospital-o"></i> 退化性膝關節炎治療決策輔助系統</h2>
-                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OA knee Treatment Decision Support System</h2>
+                            <h2><i class="fa fa-hospital-o" style="color:#9CC93A"></i> 退化性膝關節炎共享決策輔助系統</h2>
+                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OA knee Clinical SDM Support System</h2>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <label for="Reoperation">*本系統僅提供建議，實際狀況請至醫療院所經與專業醫師討論判斷為主。</label>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h3>基本資料：</h3>
+                            <h3 style="background: #9CC93A;padding: 4px 15px 4px;letter-spacing: 0.1vw;font-weight: 500;font-size: 20px;display: table;color: #fff;margin-bottom: 10px;border-radius: 50px;">基本資料：</h3>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <label for="select"><i class="fa fa-intersex"></i>性別：</label>
@@ -89,7 +88,7 @@
                             </select>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h3>目標：</h3>
+                            <h3 style="background: #9CC93A;padding: 4px 15px 4px;letter-spacing: 0.1vw;font-weight: 500;font-size: 20px;display: table;color: #fff;margin-bottom: 10px;border-radius: 50px;">目標：</h3>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                             <div class="col-md-6 col-sm-6">
@@ -107,6 +106,13 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="email">目標 2：最低可接受功能進步的週數</label>
                                 <select class="form-control" name="GOAL2">
+                                    @*<option value="3">3週</option>
+                                    <option value="6">6週</option>
+                                    <option value="12">12週</option>
+                                    <option value="26">26週</option>
+                                    <option value="36">36週</option>
+                                    <option value="48">48週</option>
+                                    <option value="52">52週</option>*@
                                     <option value="0">3週</option>
                                     <option value="0.136">6週</option>
                                     <option value="0.245">12週</option>
@@ -121,6 +127,13 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="date">目標 3：最高可接受的治療費用</label>
                                 <select class="form-control" name="GOAL3">
+                                    @*<option value="5000">5,000</option>
+                                    <option value="10000">10,000</option>
+                                    <option value="20000">20,000</option>
+                                    <option value="30000">30,000</option>
+                                    <option value="40000">40,000</option>
+                                    <option value="50000">50,000</option>
+                                    <option value="110000">110,000</option>*@
                                     <option value="1">5,000</option>
                                     <option value="0.95">10,000</option>
                                     <option value="0.85">20,000</option>
@@ -135,6 +148,10 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">目標 4：最高可接受傷口感染的風險</label>
                                 <select class="form-control" name="GOAL4">
+                                    @*<option value="0">0%</option>
+                                    <option value="1">1%</option>
+                                    <option value="1.5">1.5%</option>
+                                    <option value="2">2%</option>*@
                                     <option value="1">0%</option>
                                     <option value="0.7">1%</option>
                                     <option value="0.4">1.5%</option>
@@ -144,6 +161,11 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">目標 5：最久可接受的治療時間</label>
                                 <select class="form-control" name="GOAL5">
+                                    @*<option value="0.25">0.25個月</option>
+                                    <option value="3">3個月</option>
+                                    <option value="6">6個月</option>
+                                    <option value="9">9個月</option>
+                                    <option value="12">12個月</option>*@
                                     <option value="1">0.25個月</option>
                                     <option value="0.8">3個月</option>
                                     <option value="0.7">6個月</option>
@@ -154,6 +176,11 @@
                             <div class="col-md-6 col-sm-6">
                                 <label for="select">目標 6：最低可接受是非手術療法的可能</label>
                                 <select class="form-control" name="GOAL6">
+                                    @*<option value="0">0%</option>
+                                    <option value="25">25%</option>
+                                    <option value="50">50%</option>
+                                    <option value="70">70%</option>
+                                    <option value="100">100%</option>*@
                                     <option value="0.2">0%</option>
                                     <option value="0.4">25%</option>
                                     <option value="0.6">50%</option>
@@ -162,7 +189,94 @@
                                 </select>
                             </div>
                             <div class="col-md-12 col-sm-12">
-                                <h3>約束：</h3>
+                                <h3 style="background: #9CC93A;padding: 4px 15px 4px;letter-spacing: 0.1vw;font-weight: 500;font-size: 20px;display: table;color: #fff;margin-bottom: 10px;border-radius: 50px;">目標之間相對關係：</h3>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY1">
+                                    <option value="1">目標 1(疼痛減輕)</option>
+                                    <option value="2">目標 2(功能進步)</option>
+                                    <option value="3">目標 3(治療費用)</option>
+                                    <option value="4">目標 4(治療風險)</option>
+                                    <option value="5">目標 5(治療時間)</option>
+                                    <option value="6">目標 6(治療方法(開刀或非開刀))</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY2">
+                                    <option value="1">稍微重要於</option>
+                                    <option value="2">普通重要於</option>
+                                    <option value="3">非常重要於</option>
+                                    <option value="4">完全重要於</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY3">
+                                    <option value="1">目標 1(疼痛減輕)</option>
+                                    <option value="2">目標 2(功能進步)</option>
+                                    <option value="3">目標 3(治療費用)</option>
+                                    <option value="4">目標 4(治療風險)</option>
+                                    <option value="5">目標 5(治療時間)</option>
+                                    <option value="6">目標 6(治療方法(開刀或非開刀))</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY4">
+                                    <option value="1">目標 1(疼痛減輕)</option>
+                                    <option value="2">目標 2(功能進步)</option>
+                                    <option value="3">目標 3(治療費用)</option>
+                                    <option value="4">目標 4(治療風險)</option>
+                                    <option value="5">目標 5(治療時間)</option>
+                                    <option value="6">目標 6(治療方法(開刀或非開刀))</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY5">
+                                    <option value="1">稍微重要於</option>
+                                    <option value="2">普通重要於</option>
+                                    <option value="3">非常重要於</option>
+                                    <option value="4">完全重要於</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY6">
+                                    <option value="1">目標 1(疼痛減輕)</option>
+                                    <option value="2">目標 2(功能進步)</option>
+                                    <option value="3">目標 3(治療費用)</option>
+                                    <option value="4">目標 4(治療風險)</option>
+                                    <option value="5">目標 5(治療時間)</option>
+                                    <option value="6">目標 6(治療方法(開刀或非開刀))</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY7">
+                                    <option value="1">目標 1(疼痛減輕)</option>
+                                    <option value="2">目標 2(功能進步)</option>
+                                    <option value="3">目標 3(治療費用)</option>
+                                    <option value="4">目標 4(治療風險)</option>
+                                    <option value="5">目標 5(治療時間)</option>
+                                    <option value="6">目標 6(治療方法(開刀或非開刀))</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY8">
+                                    <option value="1">稍微重要於</option>
+                                    <option value="2">普通重要於</option>
+                                    <option value="3">非常重要於</option>
+                                    <option value="4">完全重要於</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" name="FUZZY9">
+                                    <option value="1">目標 1(疼痛減輕)</option>
+                                    <option value="2">目標 2(功能進步)</option>
+                                    <option value="3">目標 3(治療費用)</option>
+                                    <option value="4">目標 4(治療風險)</option>
+                                    <option value="5">目標 5(治療時間)</option>
+                                    <option value="6">目標 6(治療方法(開刀或非開刀))</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <h3 style="background: #9CC93A;padding: 4px 15px 4px;letter-spacing: 0.1vw;font-weight: 500;font-size: 20px;display: table;color: #fff;margin-bottom: 10px;border-radius: 50px;">約束：</h3>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <label for="quality">提升生活品質的幅度：</label>
@@ -204,7 +318,7 @@
     </section>
 
 
-    
+
 
     <!-- SCRIPTS -->
     <script src="~/Scripts/jquery.js"></script>

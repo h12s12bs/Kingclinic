@@ -29,7 +29,7 @@ namespace Kingclinic.Controllers
                 ViewBag.PROGRAM = PATIENT["PROGRAM"];
                 ViewBag.PHONE = PATIENT["PHONE"];
                 ViewBag.MESSAGE = PATIENT["MESSAGE"];*/
-            Reservation objArticle = new Reservation();
+            /*Reservation objArticle = new Reservation();
             objArticle.NAME = PATIENT["NAME"];
             objArticle.EMAIL = PATIENT["EMAIL"];
             objArticle.DATE = PATIENT["DATE"];
@@ -39,7 +39,7 @@ namespace Kingclinic.Controllers
 
             db.Reservation.Add(objArticle);
 
-            db.SaveChanges();
+            db.SaveChanges();*/
             return View();
         }
         public ActionResult About()

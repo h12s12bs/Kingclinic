@@ -17,7 +17,7 @@
         z-index: 1;
         position: relative;
         width: 135px;
-        margin: 0 auto 20px;
+        margin: 30px auto 20px;
     }
 .main-title h5 {
     color: #9CC93A;
@@ -29,7 +29,8 @@
 }
 
 #ServiceArea .service-box {
-    padding: 0 2px 0;
+    padding: 0 10px 0;
+    margin-top: 10px;
 }
 #ServiceArea .service-box .service-text {
         border: 1px #9CC93A solid;
@@ -181,22 +182,21 @@
     margin: 0;
     color: #405545;
 }
-}
-.service-time .table-responsive table tr td {
+.service-time .footer-thumb .opening-hours .table-responsive table tr td {
     color: #405545;
     padding: 15px;
     background: rgba(0,0,0,0);
-    border-bottom: 1px #d5d0cb solid;
+    border-bottom: 1px #DCE4D7 solid;
     text-align: center;
     white-space: nowrap;
 }
-.table-responsive table {
+.service-time .footer-thumb .opening-hours .table-responsive table {
     vertical-align: middle !important;
 }
-.service-time .table-responsive table tbody tr:nth-child(odd) {
-    background: #f8f9fa;
+.service-time .footer-thumb .opening-hours .table-responsive table tbody tr:nth-child(odd) {
+    background: #fff;
 }
-.service-time .table-responsive table tr th {
+.service-time .footer-thumb .opening-hours .table-responsive table tr th {
     background: #fff;
     padding: 15px;
     color: #405545;
@@ -211,6 +211,13 @@
 .h-in-gtuttable i{
     color:#9CC93A;
 }
+.service-time .footer-thumb .opening-hours .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
 .bar-title {
     position: relative;
     font-size: 30px;
@@ -221,9 +228,11 @@
     z-index: 1;
     text-align:center;
 }
-@media (min-width: 768px) and (max-width: 991px) {.newsletter--bg {
+@media (min-width: 768px) and (max-width: 991px) {
+    .newsletter--bg {
     background-position: right center;
-}}
+    }
+}
 .bar-title:before {
     content: "";
     position: absolute;

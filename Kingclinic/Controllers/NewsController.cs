@@ -13,5 +13,25 @@ namespace Kingclinic.Controllers
         {
             return View();
         }
+        public ActionResult IndexESWT()
+        { 
+            return View();
+        }
+        public ActionResult IndexOT()
+        {
+            return View();
+        }
+        public ActionResult IndexOSP()
+        {
+            return View();
+        }
+        public ActionResult IndexPRP()
+        {
+            return View();
+        }
+        public ActionResult IndexHA()
+        {
+            return View();
+        }
     }
 }

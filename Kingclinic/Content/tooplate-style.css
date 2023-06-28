@@ -89,14 +89,16 @@ p {
   }
 
   ::-webkit-scrollbar{
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
+    
   }
 
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     cursor: pointer;
-    background: #000000;
-  }
+    background: #C1C1C1;
+    -webkit-border-radius: 100%;
+}
 
   .section-title {
     padding-bottom: 20px;
@@ -147,6 +149,7 @@ p {
   .news-thumb {
     background: #ffffff;
     border-radius: 10px;
+    margin-top:50px;
   }
   .news-thumb img {
     border-radius: 10px 10px 0 0;
@@ -236,8 +239,8 @@ p {
     left: 50%;
     width: 45px;
     height: 45px;
-    margin-top: -10px;
-    margin-left: -10px;
+    margin-top: -20px;
+    margin-left: -23px;
     border-radius: 50%;
     border: 1px solid #575757;
     border-top-color: #ffffff;
@@ -340,15 +343,15 @@ p {
     color: #ffffff !important;
   }
 
-  .navbar-default .navbar-nav li a {
-    color: #555555;
-    font-size: 12px;
-    font-weight: 500;
-    padding-right: 20px;
-    padding-left: 20px;
-    -webkit-transition: all ease-in-out 0.4s;
-    transition: all ease-in-out 0.4s;
-  }
+    .navbar-default .navbar-nav li a {
+        color: #405545;
+        font-size: 16px;
+        font-weight: 500;
+        padding-right: 20px;
+        padding-left: 20px;
+        -webkit-transition: all ease-in-out 0.4s;
+        transition: all ease-in-out 0.4s;
+    }
 
   .navbar-default .navbar-nav > li a:hover {
     color: #393939 !important;
@@ -819,14 +822,13 @@ p {
     background: #393939;
     border-radius: 100%;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 20px;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
     margin-right: 5px;
     margin-bottom: 2px;
-    margin-left:100px;
   }
 
   .latest-stories {

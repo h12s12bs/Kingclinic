@@ -34,9 +34,8 @@
     <!-- PRE LOADER -->
     <section class="preloader">
         <div class="spinner">
-
+            <img src="~/images/Preloadlogo.png" class="img-responsive" alt="" style="text-align:center;width:100px;height:100px;">
             <span class="spinner-rotate"></span>
-
         </div>
     </section>
 
@@ -56,23 +55,113 @@
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                            <h2><i class="fa fa-hospital-o"></i> 退化性膝關節炎治療決策輔助系統</h2>
+                            <h2><i class="fa fa-hospital-o" style="color:#9CC93A"></i> 退化性膝關節炎治療決策輔助系統</h2>
                         </div>
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
                             <h3>分析結果：</h3>
                             <hr style="background-color: #9CC93A;" />
                             <p style="color: red; font-size: 21px; font-weight: bold; margin-top:20px;">「物理治療」</p>
                             <p style=" font-size: 21px; margin-top: 20px;">經系統計算，此為最符合您偏好的治療方式。</p>
+                            <p style=" font-size: 21px; margin-top: 20px;">B級建議&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p>
+                            <p style=" font-size: 16px; margin-top: 20px;">實證醫療證據：</p>
+                            <div class="maindoc-box">
+                                <ul>
+                                    <li style="font-size: 14px; margin-top: 20px;">建議等級 A：有好的證據支持此建議</li>
+                                    <li style="font-size: 14px; margin-top: 20px;">建議等級 B：有相當的證據支持此建議</li>
+                                    <li style="font-size: 14px; margin-top: 20px;">建議等級 C：沒有充分證據支持或反對此建議</li>
+                                    <li style="font-size: 14px; margin-top: 20px;">建議等級 D：未經清楚且嚴謹的專家意見</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
                             <h3>治療方法介紹：</h3>
                             <hr style="background-color: #9CC93A;" />
-                            <p style=" font-size: 21px; margin-top: 20px;">物理治療</p>
-                            <p style=" font-size: 21px; margin-top: 20px;"></p>
+                            <div class="col-md-12 col-sm-12">
+                                <p style=" font-size: 21px; margin-top: 20px;">
+                                    物理治療是一種直接注射到退化關節中的關節保養劑。它具有高粘彈性和潤滑作用的機理。對關節軟骨有親和力，能覆蓋在軟骨表面保護軟骨，防止磨損和退化，利用其特性可以抑制炎症，改善關節攣縮，增加關節活動度。
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <p style=" font-size: 21px; margin-top: 20px;">優點：</p>
+                                <div class="maindoc-box">
+                                    <ul>
+                                        <li style="font-size: 18px; margin-top: 20px;">膝關節潤滑</li>
+                                        <li style="font-size: 18px; margin-top: 20px;">改善關節活動度</li>
+                                        <li style="font-size: 18px; margin-top: 20px;">緩解疼痛</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <p style=" font-size: 21px; margin-top: 20px;">不良反應及缺點:</p>
+                                <div class="maindoc-box">
+                                    <ul>
+                                        <li style="font-size: 18px; margin-top: 20px;">
+                                            暫時性局部發炎腫脹疼痛
+                                        </li>
+                                        <li style="font-size: 18px; margin-top: 20px;">
+                                            膝蓋移動困難
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <p style=" font-size: 21px; margin-top: 20px;">適應症：</p>
+                                <div class="maindoc-box">
+                                    <ul>
+                                        <li style="font-size: 18px; margin-top: 20px;">低中度關節退化</li>
+                                        <li style="font-size: 18px; margin-top: 20px;">關節軟骨受傷</li>
+                                        <li style="font-size: 18px; margin-top: 20px;">術後關節炎</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                <h3>目標達成率：</h3>
+                                <hr style="background-color: #9CC93A;" />
+                                <div class="col-md-2 col-sm-2">
+                                    <div id="divg1r" style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: 10px; line-height:19px; text-align: center; z-index: 999999999999999; font-weight:bold;">
+                                        @TempData["g1r"]%
+                                    </div>
+                                    <canvas id="g1r" width="100" height="100"></canvas>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div id="divg2r" style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: 10px; line-height:19px; text-align: center; z-index: 999999999999999; font-weight:bold;">
+                                        @TempData["g2r"]%
+                                    </div>
+                                    <canvas id="g2r" width="100" height="100"></canvas>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div id="divg3r" style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: 10px; line-height:19px; text-align: center; z-index: 999999999999999; font-weight:bold;">
+                                        @TempData["g3r"]%
+                                    </div>
+                                    <canvas id="g3r" width="100" height="100"></canvas>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div id="divg4r" style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: 10px; line-height:19px; text-align: center; z-index: 999999999999999; font-weight:bold;">
+                                        @TempData["g4r"]%
+                                    </div>
+                                    <canvas id="g4r" width="100" height="100"></canvas>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div id="divg5r" style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: 10px; line-height: 19px; text-align: center; z-index: 999999999999999; font-weight: bold;">
+                                        @TempData["g5r"]%
+                                    </div>
+                                    <canvas id="g5r" width="100" height="100"></canvas>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div id="divg6r" style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: 10px; line-height: 19px; text-align: center; z-index: 999999999999999; font-weight: bold;">
+                                        @TempData["g6r"]%
+                                    </div>
+                                    <canvas id="g6r" width="100" height="100"></canvas>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <button type="submit" class="form-control" id="cf-submit" name="Submit">返回系統</button>
+                            <p style=" font-size: 10px; margin-top: 20px;text-align:right;"><a target="_blank" href=" https://www.orthoguidelines.org/guideline-detail?id=1659&tab=all_guidelines">資料來源：American Academy of Orthopaedic Surgeons Management of Osteoarthritis of the Knee (Non-Arthroplasty) Evidence-Based Clinical Practice Guideline (3rd Edition)</a></p>
                         </div>
                     </form>
                 </div>
@@ -84,7 +173,7 @@
     </section>
 
 
-  
+
 
 
     <!-- SCRIPTS -->
@@ -96,6 +185,319 @@
     <script src="~/Scripts/smoothscroll.js"></script>
     <script src="~/Scripts/owl.carousel.min.js"></script>
     <script src="~/Scripts/custom.js"></script>
-    
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/Scripts/Chart.js"></script>
+    <script>
+        var ctxDoughnut = document.getElementById("g1r");
+    var DoughnutChart = new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            //labels: ['Goal 1'],
+            datasets: [{
+                data: [@TempData["g1r"], 100 -@TempData["g1r"]],
+                backgroundColor: [
+                    '#C1395e',
+                    '#ededed'
+
+                ]
+
+             }],
+        },
+        options: {
+
+            responsive: true,
+            title: {
+                display: true,
+                fontSize: 20,
+                fontFamily: '微軟正黑體',
+                text: '目標 1'
+            },
+            legend: {
+
+                position: 'bottom',
+                labels: {
+                    fontColor: 'black'
+                },
+
+
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    },
+                }
+            },
+        }
+    });
+
+         var ctxDoughnut = document.getElementById("g2r");
+    var DoughnutChart = new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            //labels: ['Goal 2'],
+            datasets: [{
+                data: [@TempData["g2r"], 100 -@TempData["g2r"]],
+                backgroundColor: [
+                    '#aec17b',
+                    '#ededed'
+
+
+                ]
+
+             }],
+        },
+        options: {
+
+            responsive: true,
+            title: {
+                display: true,
+                fontSize: 20,
+                fontFamily: '微軟正黑體',
+                text: '目標 2'
+            },
+            legend: {
+
+                position: 'bottom',
+                labels: {
+                    fontColor: 'black'
+                },
+
+
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    },
+                }
+            },
+        }
+    });
+
+         var ctxDoughnut = document.getElementById("g3r");
+    var DoughnutChart = new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            //labels: ['Goal 3'],
+            datasets: [{
+                data: [@TempData["g3r"], 100 -@TempData["g3r"]],
+                backgroundColor: [
+                    '#f0ca50',
+                    '#ededed'
+
+
+                ]
+
+             }],
+        },
+        options: {
+
+            responsive: true,
+            title: {
+                display: true,
+                fontSize: 20,
+                fontFamily: '微軟正黑體',
+                text: '目標 3'
+            },
+            legend: {
+
+                position: 'bottom',
+                labels: {
+                    fontColor: 'black'
+                },
+
+
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    },
+                }
+            },
+        }
+    });
+
+         var ctxDoughnut = document.getElementById("g4r");
+    var DoughnutChart = new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            //labels: ['Goal 4'],
+            datasets: [{
+                data: [@TempData["g4r"], 100 -@TempData["g4r"]],
+                backgroundColor: [
+                    '#e07b42',
+                    '#ededed'
+
+
+                ]
+
+             }],
+        },
+        options: {
+
+            responsive: true,
+            title: {
+                display: true,
+                fontSize: 20,
+                fontFamily: '微軟正黑體',
+                text: '目標 4'
+            },
+            legend: {
+
+                position: 'bottom',
+                labels: {
+                    fontColor: 'black'
+                },
+
+
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    },
+                }
+            },
+        }
+    });
+
+         var ctxDoughnut = document.getElementById("g5r");
+    var DoughnutChart = new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            //labels: ['Goal 5'],
+            datasets: [{
+                data: [@TempData["g5r"], 100 -@TempData["g5r"]],
+                backgroundColor: [
+                    '#89a7c2',
+                    '#ededed'
+
+
+                ]
+
+             }],
+        },
+        options: {
+
+            responsive: true,
+            title: {
+                display: true,
+                fontSize: 20,
+                fontFamily: '微軟正黑體',
+                text: '目標 5'
+            },
+            legend: {
+
+                position: 'bottom',
+                labels: {
+                    fontColor: 'black'
+                },
+
+
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    },
+                }
+            },
+        }
+    });
+
+         var ctxDoughnut = document.getElementById("g6r");
+    var DoughnutChart = new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            //labels: ['Goal 6'],
+            datasets: [{
+                data: [@TempData["g6r"], 100 -@TempData["g6r"]],
+                backgroundColor: [
+                    '#B5B5B3',
+                    '#ededed'
+
+
+                ]
+
+             }],
+        },
+        options: {
+
+            responsive: true,
+            title: {
+                display: true,
+                fontSize: 20,
+                fontFamily: '微軟正黑體',
+                text: '目標 6'
+            },
+            legend: {
+
+                position: 'bottom',
+                labels: {
+                    fontColor: 'black'
+                },
+
+
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']] + '%';
+                    },
+                }
+            },
+        }
+    });
+    </script>
+    <script>
+
+
+            var g1r =@TempData["g1r"];
+            var g2r =@TempData["g2r"];
+            var g3r =@TempData["g3r"];
+            var g4r =@TempData["g4r"];
+            var g5r =@TempData["g5r"];
+            var g6r =@TempData["g6r"];
+
+            if (g1r >= 80) {
+                document.getElementById("divg1r").style.color = 'red';
+            }
+            if (g2r >= 80) {
+                document.getElementById("divg2r").style.color = 'red';
+            }
+            if (g3r >= 80) {
+                document.getElementById("divg3r").style.color = 'red';
+            }
+            if (g4r >= 80) {
+                document.getElementById("divg4r").style.color = 'red';
+            }
+            if (g5r >= 80) {
+                document.getElementById("divg5r").style.color = 'red';
+            }
+            if (g6r >= 80) {
+                document.getElementById("divg6r").style.color = 'red';
+            }
+
+    </script>
 </body>
 </html>

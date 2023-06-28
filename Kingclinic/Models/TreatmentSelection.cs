@@ -26,5 +26,14 @@ namespace Kingclinic.Models
         public string GOAL4 { get; set; }
         public string GOAL5 { get; set; }
         public string GOAL6 { get; set; }
+        public string FUZZY1 { get; set; }
+        public string FUZZY2 { get; set; }
+        public string FUZZY3 { get; set; }
+        public string FUZZY4 { get; set; }
+        public string FUZZY5 { get; set; }
+        public string FUZZY6 { get; set; }
+        public string FUZZY7 { get; set; }
+        public string FUZZY8 { get; set; }
+        public string FUZZY9 { get; set; }
     }
 }
